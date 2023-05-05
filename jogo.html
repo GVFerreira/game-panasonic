@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>V-Razor Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onresize="tamanhoTela()">
+    <div id="painel">
+        <div id="vidas">
+            <img id="vida1" class="helmet" src="img/heart.png">
+            <img id="vida2" class="helmet" src="img/heart.png">
+            <img id="vida3" class="helmet" src="img/heart.png">
+        </div>
+        <div id="tempo">
+            <p>Tempo de jogo: <span id="cronometro" class="cronometro">0 segundos</span></p>
+        </div>
+    </div>
+    <script>
+        var cronometro = setInterval(() => {
+            tempo++
+            document.getElementById('cronometro').innerText = tempo + ' segundos'
+            var meuStorage = window.localStorage.setItem("meu-tempo", tempo)
+        }, 1000)
+
+        setInterval(function() { 
+            posicaoTela()
+        }, 1000)
+    </script>
+
+</body>
+</html>
