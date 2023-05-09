@@ -9,18 +9,20 @@
         
     </script>
 </head>
-<body id="corpo">
+<body id="body-gameover">
+    <img id="img-panasonic" src="img/logo-panasonic.svg">
     <div id="container-gameover">
         <div id="gameover">
-            <h1 style="text-align: center; font-size: 10rem; color: #FFF; line-height: 9rem; margin-bottom: 3rem;">GAME<br>OVER</h1>
+            <p style="display: none">.</p>
         </div>
         <div id="restart" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h1>Tempo Esgotado...</h1>
+            <p>Sua pontuação: <span id="minha-pontuacao"></span> pontos</p>
             <button id="btn-restart" onclick="window.location.href = 'index.html'">Reiniciar game</button>
-            <p style="color: #FFF; font-size: 2rem; margin: 3rem 0;">Minha pontuação: <span id="meu-tempo"></span> segundos</p>
         </div>
     </div>
 </body>
 <script>
-    document.getElementById('meu-tempo').innerText = window.localStorage.getItem("meu-tempo")
+    document.getElementById('minha-pontuacao').innerText = window.localStorage.getItem("minha-pontuacao")
 </script>
 </html>

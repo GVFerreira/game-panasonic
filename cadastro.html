@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>V-Razor Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script>
+        form.preventDefault
+        function irJogo() {
+            window.location.href = "jogo.html"
+        }
+    </script>
+</head>
+<body id="body-cadastro">
+    <div>
+        <img id="img-panasonic" src="img/logo-panasonic.svg">
+        <div id="container-cadastro">
+            <div id="form">
+                <h1>cadastre-se para<br>entrar no ranking</h1>
+                <div>
+                    <label for="nome">Nome:</label><br>
+                    <input type="text">
+                </div>
+
+                <div>
+                    <label for="numIronman">Número Iron Man:</label><br>
+                    <input type="text">
+                </div>
+
+                <button id="btn-form" onclick="irJogo()">iniciar game</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

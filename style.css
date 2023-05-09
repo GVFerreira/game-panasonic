@@ -2,22 +2,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif
 }
 
 body {
     width: 100vw;
     height: 100vh;
-    background: url('img/bg-main.jpg') no-repeat center center;
     background-size: cover;
 }
 
-.tamanho1 {
-    width: 5%;
+#body-index {
+    background: url('img/5.jpg') no-repeat center center;
 }
 
-.tamanho2 {
-    width: 6%;
+#body-regras {
+    background: url('img/1b.jpg') no-repeat center center;
+}
+
+#body-jogo {
+    background: url('img/bg-main.jpg') no-repeat center center;
+}
+
+#body-gameover {
+    background: url('img/3c.jpg') no-repeat center center;
+}
+
+#body-cadastro {
+    background: url('img/4.jpg') no-repeat center center;
+}
+
+#img-panasonic {
+    position: fixed;
+    top: 20px;
+    right: 60px;
 }
 
 #painel {
@@ -43,43 +60,41 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-/* #caixa-placar {
-    background-color: #fff;
-    width: 400px;
-    height: 50px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#container-gameover div {
+    width: 50%;
 }
 
-#placar {
+#restart h1{
+    font-size: 96px;
     font-weight: bold;
-    font-size: 25px;
-} */
-
-#img-gameover {
-    width: 800px;
+    color: #FFF
 }
 
-#btn-restart {
-    height: 50px;
-    width: 250px;
-    background-color: #FFF;
-    border: none;
+#restart p {
+    font-size: 64px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+#restart button {
+    margin: 50px 0 0 0;
+    padding: .5rem 2rem;
     border-radius: 10px;
     font-size: 25px;
-    color: #212121;
+    background-color: #0268B2;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid #FFF
 }
 
-#btn-restart:hover {
-    font-size: 28px;
-    background-color: #D0D0D0;
+#restart button:hover {
+    background-color: #025591;
 }
 
 #container-iniciar {
@@ -111,16 +126,99 @@ body {
 }
 
 #btn-start {
-    height: 50px;
-    width: 250px;
-    background-color: #FFF;
-    border: none;
+    padding: .5rem 2rem;
     border-radius: 10px;
     font-size: 25px;
-    color: #212121;
+    background-color: #0268B2;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid #FFF
 }
 
 #btn-start:hover {
+    background-color: #025591;
+}
+
+#container-regras {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+
+#container-regras #box-lista {
+    margin: 0 0 0 60px;
+    color: #FFF
+}
+
+#container-regras #box-lista ol {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    font-size: 24px;
+    padding: 0 0 0 30px;
+    margin: 44px 0;
+}
+
+#container-regras #box-lista h1{
+    text-transform: uppercase;
+    font-size: 96px;
+    font-weight: bold;
+    color: #FFF
+}
+
+#container-cadastro {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-cadastro #form {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 3rem;
+    border-radius: 10px;
+}
+
+#container-cadastro h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 48px;
+    text-align: center;
+    color: #000000;
+}
+
+#container-cadastro input[type="text"] {
+    height: 60px;
+    width: 100%;
+    background-color: #D8D8D8;
+    border-radius: 10px;
+    padding: .4rem;
     font-size: 28px;
-    background-color: #D0D0D0;
+}
+
+#container-cadastro label {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+#container-cadastro #btn-form {
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: #000;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid #FFF
 }
