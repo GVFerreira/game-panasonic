@@ -5,11 +5,28 @@
     <title>V-Razor Game</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #EEE;
+        }
+
+        #jogo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #tempo {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
 </head>
 <body id="body-jogo" onresize="tamanhoTela()">
-    <div id="painel">
-        <p>Sua pontuação: <span id="pontuacao">0</span> pontos</p>
-        <p>Tempo de jogo: <span id="tempo">30</span> segundos</p>
-    </div>
+        <div id="tempo">0.000</div>
 </body>
 </html>
