@@ -4,15 +4,10 @@
     <meta charset="UTF-8">
     <title>V-Razor Game</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function irCadastro() {
-            window.location.href = "cadastro.html"
-        }
-    </script>
 </head>
 <body id="body-regras">
+    <img id="img-panasonic" src="img/logo-panasonic.svg">
     <div>
-        <img id="img-panasonic" src="img/logo-panasonic.svg">
         <div id="container-regras">
             <div id="box-lista">
                 <h1>Regras do game</h1>
@@ -20,14 +15,14 @@
                     <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, mollitia.</li>
                     <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, voluptate.</li>
                     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, et.</li>
-                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, numquam?</li>
+                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, numquam.</li>
                     <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, rem!</li>
                     <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quibusdam.</li>
                 </ol>
-                <button id="btn-start" onclick="irCadastro()">Cadastrar jogador</button>
+                <button onclick="window.location.href = 'jogo.html'">jogar</button>
             </div>
-            <div>
-                <p>.</p>
+            <div id="box-image">
+                <img src="img/vrazor-regras.png" lazy="loading">
             </div>
         </div>
     </div>

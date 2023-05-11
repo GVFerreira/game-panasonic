@@ -1,32 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>V-Razor Game</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #EEE;
-        }
-
-        #jogo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        #tempo {
-            font-size: 5rem;
-            font-weight: bold;
-            color: #333;
-        }
-    </style>
-</head>
-<body id="body-jogo" onresize="tamanhoTela()">
-        <div id="tempo">0.000</div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>V-Razor Game</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="body-jogo" onresize="tamanhoTela()" onload="iniciarTimer()">
+        <p id="tempo">0.000</p>
+    </body>
+    <script src="./js/game.js"></script>
+    <script src="./js/timer.js"></script>
 </html>

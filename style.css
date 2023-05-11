@@ -1,224 +1,209 @@
+@font-face {
+    font-family: 'DinPro';
+    src: url('./font/DINPro400.otf') format('opentype')
+}
+
 * {
+    font-family: 'DinPro';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Source Sans Pro', Helvetica, sans-serif
+    color: #FFF;
 }
 
 body {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-size: cover;
 }
 
-#body-index {
-    background: url('img/5.jpg') no-repeat center center;
+button {
+    text-shadow: 0 0 15px #a1e4fe;
+    box-shadow: 0 0 15px 0px #a1e4fe;
+    border: 3px solid #DFF7FF;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
 }
 
-#body-regras {
-    background: url('img/1b.jpg') no-repeat center center;
-}
-
-#body-jogo {
-    background: url('img/bg-main.jpg') no-repeat center center;
-}
-
-#body-gameover {
-    background: url('img/3c.jpg') no-repeat center center;
-}
-
-#body-cadastro {
-    background: url('img/4.jpg') no-repeat center center;
+h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
 #img-panasonic {
     position: fixed;
     top: 20px;
     right: 60px;
+    width: 8%;
 }
 
-#painel {
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    width: 300px;
-    padding: 10px;
-    border-radius: 10px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-weight: bold;
+/* === INDEX === */
+#body-index {
+    background: url('./img/bg-index.png') no-repeat center center;
 }
 
-.helmet {
-    width: 30px;
-    margin-right: 10px;
-    margin-bottom: 5px;
+#body-index button {
+    background-color: #00000000;
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
-#container-gameover {
-    width: 100vw;
-    height: 100vh;
+/* === REGRAS === */
+#body-regras {
+    background: url('./img/bg-main.jpg') no-repeat center center;
+}
+
+#body-regras #container-regras {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-#container-gameover div {
+#body-regras #container-regras div {
     width: 50%;
 }
 
-#restart h1{
-    font-size: 96px;
-    font-weight: bold;
-    color: #FFF
+#body-regras #container-regras #box-lista ol {
+    padding: 0 0 0 2rem;
+    margin: 3rem 0;
 }
 
-#restart p {
-    font-size: 64px;
-    font-weight: bold;
-    color: #FFF;
+#body-regras #container-regras #box-lista li {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
 }
 
-#restart button {
-    margin: 50px 0 0 0;
-    padding: .5rem 2rem;
-    border-radius: 10px;
-    font-size: 25px;
-    background-color: #0268B2;
-    color: #FFF;
-    text-transform: uppercase;
-    font-weight: 700;
-    border: 1px solid #FFF
-}
-
-#restart button:hover {
-    background-color: #025591;
-}
-
-#container-iniciar {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#img-iniciar {
-    width: 800px;
-}
-
-#start {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#start select {
-    width: 250px;
-    margin-bottom: 20px;
-    height: 30px;
-    border: 1px solid #000;
-    border-radius: 5px;
-}
-
-#btn-start {
-    padding: .5rem 2rem;
-    border-radius: 10px;
-    font-size: 25px;
-    background-color: #0268B2;
-    color: #FFF;
-    text-transform: uppercase;
-    font-weight: 700;
-    border: 1px solid #FFF
-}
-
-#btn-start:hover {
-    background-color: #025591;
-}
-
-#container-regras {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-}
-
-
-#container-regras #box-lista {
-    margin: 0 0 0 60px;
-    color: #FFF
-}
-
-#container-regras #box-lista ol {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    font-size: 24px;
-    padding: 0 0 0 30px;
-    margin: 44px 0;
-}
-
-#container-regras #box-lista h1{
-    text-transform: uppercase;
-    font-size: 96px;
-    font-weight: bold;
-    color: #FFF
-}
-
-#container-cadastro {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#container-cadastro #form {
-    background-color: #FFF;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 4rem 3rem;
-    border-radius: 10px;
-}
-
-#container-cadastro h1 {
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 48px;
-    text-align: center;
-    color: #000000;
-}
-
-#container-cadastro input[type="text"] {
-    height: 60px;
-    width: 100%;
-    background-color: #D8D8D8;
-    border-radius: 10px;
-    padding: .4rem;
-    font-size: 28px;
-}
-
-#container-cadastro label {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 45px;
-    text-transform: uppercase;
-}
-
-#container-cadastro #btn-form {
-    padding: .5rem 2rem;
-    border-radius: 10px;
-    font-size: 25px;
+#body-regras #container-regras #box-lista button {
     background-color: #000;
-    color: #FFF;
-    text-transform: uppercase;
-    font-weight: 700;
-    border: 1px solid #FFF
+}
+
+#body-regras #container-regras #box-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#body-regras #container-regras #box-image img {
+    height: 40rem;
+}
+
+/* === CADASTRO === */
+#body-cadastro {
+    background: url('./img/bg-main.jpg') no-repeat center center;
+}
+
+#body-cadastro #form {
+    background-color: #000;
+    border: 1px solid #484848;
+    padding: 4rem 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#body-cadastro #form p {
+    margin-top: 2rem;
+}
+
+#body-cadastro #form input {
+    margin: .2rem 0 2rem 0;
+    height: 3rem;
+    width: 80%;
+    display: inline;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #000 !important;
+    border-radius: 5px;
+    border: none;
+}
+
+#body-cadastro #form button {
+    background-color: #FFF;
+    color: #000;
+    border-radius: 2px solid #3f3f3f;
+}
+
+/* === JOGO === */
+#body-jogo {
+    background: url('./img/bg-main.jpg') no-repeat center center;
+}
+
+#body-jogo #tempo {
+    font-size: 2rem;
+    font-weight: bold;
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #000;
+    border-radius: 10px;
+    padding: .5rem 1.5rem
+}
+
+
+/* === GAME OVER === */
+#body-gameover {
+    background: url('./img/bg-main.jpg') no-repeat center center;
+}
+
+#body-gameover #container-gameover {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 7rem;
+}
+
+#body-gameover #container-gameover div {
+    width: 50%;
+}
+
+#body-gameover #container-gameover #restart {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+#body-gameover #container-gameover #restart p {
+    font-size: 2rem;
+}
+
+#body-gameover #container-gameover #restart button {
+    margin: 2rem 0;
+    background-color: #00000000;
+}
+
+#body-gameover #container-gameover #ranking h1 {
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+}
+
+#body-gameover #container-gameover table {
+    border-radius: .2rem;
+    width: 100%;
+}
+
+#body-gameover #container-gameover table tbody tr td {
+    background-color: #FFF;
+
+}
+
+#body-gameover #container-gameover table td,
+#body-gameover #container-gameover table th {
+    color: #000 !important;
+    padding: 0 0 0 .5rem;
 }

@@ -1,34 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>V-Razor Game</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        function irJogo() {
-            window.location.href = "jogo.html"
-        }
-    </script>
-</head>
-<body id="body-cadastro">
-    <div>
+    <head>
+        <meta charset="UTF-8">
+        <title>V-Razor Game</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="body-cadastro">
         <img id="img-panasonic" src="img/logo-panasonic.svg">
         <div id="container-cadastro">
             <div id="form">
-                <h1>cadastre-se para<br>entrar no ranking</h1>
-                <div>
-                    <label for="nome">Nome:</label><br>
-                    <input type="text">
-                </div>
-
-                <div>
-                    <label for="numIronman">Número Iron Man:</label><br>
-                    <input type="text">
-                </div>
-
-                <button id="btn-start" onclick="irJogo()">iniciar game</button>
+                <h1>valide seu cadastro</h1>
+                <p>Digite apenas números</p>
+                <input type="text" name="celular" id="celular" placeholder="Celular: (DD) 91234-5678">
+                <button onclick="window.location.href = 'regras.html'">validar</button>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
