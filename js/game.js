@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 	const bot = new Image()
 	bot.src = 'img/v-razor.png'
-	bot.style.backgroundColor = "#FFFFFF"
-	bot.style.borderRadius = "100%"
-	bot.style.width = '65px'
-	bot.style.height = '65px'
+	bot.style.width = '10%'
 	bot.style.position = 'absolute'
 	bot.id = 'bot'
 
@@ -16,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	function posicaoAleatoria() {
-		const botWidth = 65
-		const botHeight = 125
+		const botWidth = tamanhoTela().largura * 0.2
+		const botHeight = tamanhoTela().altura * 0.2
 		const maxX = tamanhoTela().largura - botWidth
 		const maxY = tamanhoTela().altura - botHeight
 		return {
@@ -26,33 +23,33 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 
-	let intervalId, tempoFinal
+	let intervalId, tempoFinal, botsClicados
 
 	function adicionarBot() {
 		const { posicaoX, posicaoY } = posicaoAleatoria()
-		bot.style.left = posicaoX + 'px'
-		bot.style.top = posicaoY + 'px'
+		const novoBot = bot.cloneNode()
+		novoBot.style.left = posicaoX + 'px'
+		novoBot.style.top = posicaoY + 'px'
 
-		bot.onclick = function () {
+		novoBot.onclick = function () {
 			this.remove()
 			botsClicados++
-			console.log(botsClicados)
 			if (botsClicados >= 20) {
 				clearInterval(intervalId)
 				const tempoTela = parseFloat(document.getElementById('tempo').innerText)
 				localStorage.setItem("minha-pontuacao", tempoTela)
 				window.location.href = "gameover.html"
 			} else {
-				criarBot()
+				adicionarBot()
 			}
 		}
-
-		return bot
+		document.body.appendChild(novoBot)
 	}
 
-	function criarBot() {
-		const bot = adicionarBot()
-		document.body.appendChild(bot)
+	function criarBots() {
+		for (let i = 0; i < 4; i++) {
+			adicionarBot()
+		}
 	}
 
 	function iniciarJogo() {
@@ -61,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		let tempo = 0
 		intervalId = null
 		botsClicados = 0
-		criarBot()
+		criarBots()
 
 		intervalId = setInterval(() => {
 			tempo++
