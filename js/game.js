@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				clearInterval(intervalId)
 				const tempoTela = parseFloat(document.getElementById('tempo').innerText)
 				localStorage.setItem("minha-pontuacao", tempoTela)
-				window.location.href = "gameover.html"
+				window.location.href = "gameover.php"
 			} else {
 				adicionarBot()
 			}
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				clearInterval(intervalId)
 				const minhaPontuacao = tempoFinal.toFixed(3)
 				localStorage.setItem("minha-pontuacao", minhaPontuacao)
-				window.location.href = "gameover.html"
+				window.location.href = "gameover.php"
 			}
 		}, 1000)
 
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			tempoFinal = (Date.now() - tempoInicial) / 1000
 			const minhaPontuacao = tempoFinal.toFixed(2)
 			localStorage.setItem("minha-pontuacao", minhaPontuacao)
-			window.location.href = "gameover.html"
+			window.location.href = "gameover.php"
 		}, 60 * 1000)
 	}
 

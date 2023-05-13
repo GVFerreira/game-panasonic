@@ -1,9 +1,12 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <title>V-Razor Game</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body id="body-cadastro">
         <img id="img-panasonic" src="img/logo-panasonic.svg">
@@ -24,10 +27,5 @@
                 $('#celular').mask('(99) 99999-9999')
             })
         })
-    </script>
-    <script>
-        if (typeof telefoneNaoEncontrado !== 'undefined' && telefoneNaoEncontrado) {
-            alert('Telefone não encontrado. Por favor, verifique se o número foi digitado corretamente ou faça um novo cadastro.');
-        }
     </script>
 </html>
