@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include("connection.php");
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -20,78 +24,56 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1.</td>
-                            <td>Nome jogador</td>
-                            <td>23.095</td>
-                        </tr>
-                        <tr>
-                            <td>2.</td>
-                            <td>Nome jogador</td>
-                            <td>22.459</td>
-                        </tr>
-                        <tr>
-                            <td>3.</td>
-                            <td>Nome jogador</td>
-                            <td>22.001</td>
-                        </tr>
-                        <tr>
-                            <td>4.</td>
-                            <td>Nome jogador</td>
-                            <td>21.984</td>
-                        </tr>
-                        <tr>
-                            <td>5.</td>
-                            <td>Nome jogador</td>
-                            <td>21.595</td>
-                        </tr>
-                        <tr>
-                            <td>5.</td>
-                            <td>Nome jogador</td>
-                            <td>20.095</td>
-                        </tr>
-                        <tr>
-                            <td>6.</td>
-                            <td>Nome jogador</td>
-                            <td>19.432</td>
-                        </tr>
-                        <tr>
-                            <td>7.</td>
-                            <td>Nome jogador</td>
-                            <td>18.009</td>
-                        </tr>
-                        <tr>
-                            <td>8.</td>
-                            <td>Nome jogador</td>
-                            <td>17.678</td>
-                        </tr>
-                        <tr>
-                            <td>9.</td>
-                            <td>Nome jogador</td>
-                            <td>15.050</td>
-                        </tr>
-                        <tr>
-                            <td>10.</td>
-                            <td>Nome jogador</td>
-                            <td>15.005</td>
-                        </tr>
+                        <?php
+                           // Consulta para obter os dados do ranking atualizado
+                           $sql = "SELECT nome, sobrenome, pontuacao FROM cadastros_lp ORDER BY pontuacao ASC LIMIT 10";
+                           $results = $conn->query($sql);
+                           $posicao = 1;
+                   
+                           // Exibir o ranking
+                           foreach ($results as $result) {
+                               $nome = $result['nome'];
+                               $sobrenome = $result['sobrenome'];
+                               $pontuacao = $result['pontuacao'];
+                        ?>
+                            <tr>
+                                <td><?php echo $posicao; ?></td>
+                                <td><?php echo $nome . ' ' . $sobrenome; ?></td>
+                                <td><?php echo number_format($pontuacao, 3); ?></td>
+                            </tr>
+                        <?php
+                               $posicao++;
+                            }
+                        ?>
                     </tbody>
                 </table>
             </div>
             <div id="restart">
-                <h1>Tempo Esgotado...</h1>
+                <h1>Fim de jogo...</h1>
                 <p>Seu tempo: <span id="minha-pontuacao"></span> segundos</p>
                 <button id="btn-restart" onclick="window.location.href = 'index.php'">reiniciar</button>
             </div>
         </div>
     </body>
     <script>
-        const spanPontuacao = document.getElementById('minha-pontuacao')
         const pontuacao = window.localStorage.getItem("minha-pontuacao")
+        const spanPontuacao = document.getElementById('minha-pontuacao')
         spanPontuacao.innerText = pontuacao
 
-        let xmlhttp = new XMLHttpRequest()
-        xmlhttp.open("GET", "salvar-pontuacao.php?pontuacao=" + pontuacao, true)
-        xmlhttp.send()
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variável de controle para verificar se a página já foi atualizada
+            var paginaAtualizada = false;
+
+            // Verificar se a página já foi atualizada antes de executar o redirecionamento
+            if (!paginaAtualizada) {
+                // Definir a variável para true para evitar atualizações futuras
+                paginaAtualizada = true;
+
+                // Redirecionar para a página novamente após 5 segundos (5000 milissegundos)
+                setTimeout(function() {
+                    location.reload();
+                }, 5000); // 5 segundos
+            }
+        })
     </script>
 </html>

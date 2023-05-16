@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Din Pro';
-    src:    url('./font/DINPro400.otf') format('opentype')
+    src:    url('../font/DINPro400.otf') format('opentype')
 }
 
 * {
@@ -96,7 +96,7 @@ main {
 
     .left_content {
         display: flex;
-        background-image: url('img/bg-desktop-lp.jpg');
+        background-image: url('../img/bg-desktop-lp.jpg');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -228,8 +228,7 @@ main {
 }
 
 /* MOBILE */
-@media (min-width: 280px) and (max-width: 890px) {
-
+@media (max-width: 1024px) {
     .conteudo_total {
         display: flex;
         flex-direction: column;
@@ -249,7 +248,7 @@ main {
 
     .left_content {
         display: flex;
-        background-image: url('img/bg-mobile-lp.jpg');
+        background-image: url('../img/bg-mobile-lp.jpg');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -304,7 +303,6 @@ main {
 
     .image-logo {
         width: 40%;
-        
     }
 
     /*FORMULARIO*/
@@ -331,12 +329,14 @@ main {
         flex-direction: column;
         align-items: center;
         margin-top: 1rem;
+        padding: 1.5rem;
+        width: 100%;
     }
 
     .input_style {
         outline: none;
         color: #000;
-        width: 20rem;
+        width: 100%;
         height: 3rem;
         border: 2px solid #FFFFFF;
         border-radius: 5px;
@@ -354,12 +354,11 @@ main {
 
     .container_checkbox {
         display: flex;
-        width: 265px;
+        width: auto;
         letter-spacing: 0px;
         color: #FFFFFF;
         opacity: 1;
         padding-top: 1.5rem;
-        margin-left: -3.2rem;
     }
 
     .container_checkbox > label {
@@ -387,7 +386,7 @@ main {
 
     .botao_cadastro {
         cursor: pointer;
-        width: 20rem;
+        width: 100%;
         height: 3rem;
         background-color: #ECE83B;
         border: none;
@@ -405,12 +404,12 @@ main {
 
     /* FOOTER */
     footer {
-        width: 100vw;
+        width: 100%;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: #262626;
-        height: 10vh;
         font-weight: 200;
         margin-top: auto;
     }
@@ -424,27 +423,50 @@ main {
         color: #eee;
         opacity: 50%;
     }
-}
 
-@media (max-width:800px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-    .footer_display {
+    .social-media-mobile {
+        width: 100%;
+        margin-top: 1.5rem;
         display: flex;
-        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
     }
-    
+
+    .img_social a img {
+        width: 35px;
+        height: 30px;
+    }
+
+    .footer-items-mobile {
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    .footer-items-mobile a {
+        font-weight: 550;
+        letter-spacing: 1.5px;
+        font-size: 1.1rem;
+        margin-top: 1.2rem;
+        color: white;
+        text-decoration: none;
+    }
 }
 
 @media (max-width:495px) {
+    .image-logo {
+        width: 80%;
+    }
 
     footer {
-        height: auto;
         display: flex;
         justify-content: center;
-        align-items: flex-start
+        align-items: flex-start;
+        height: auto;
     }
 
     .social-media-mobile {
+        width: 100%;
         margin-top: 1.5rem;
         display: flex;
         gap: 1rem;

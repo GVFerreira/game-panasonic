@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta name="ROBOTS" content="INDEX,FOLLOW">
@@ -52,7 +53,7 @@
                             <div class="container_checkbox">
                                 <input class="caixa-check" id="aceitarComunicacao" type="checkbox" nome="aceitarComunicacao" required="required">
                                 <label for="aceitarComunicacao">
-                                    Li e aceito as <a href="https://loja.panasonic.com.br/institucional/politica-de-privacidade" target="_blank" class="aceite_termos_anchor">políticas de privacidade</a>.
+                                    Li e aceito as <a href="https://www.panasonic.com/br/politica-de-privacidade.html" target="_blank" class="aceite_termos_anchor">políticas de privacidade</a>.
                                 </label>
                             </div>
 
@@ -128,4 +129,13 @@
             })
         })
     </script>
+    <?php
+        if (isset($_GET['alerta']) && $_GET['alerta'] == 0) {
+            echo '<script defer>alert("Cadastro realizado com sucesso.");</script>';
+        };
+
+        if (isset($_GET['alerta']) && $_GET['alerta'] == 1) {
+            echo '<script defer>alert("Já existe um cadastro com esse número de celular.");</script>';
+        };
+    ?>
 </html>

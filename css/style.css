@@ -216,6 +216,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: scale(1.5);
 }
 
 #body-gameover #container-gameover #ranking h1 {

@@ -1,24 +1,25 @@
 <?php
-    include('connection.php');
+    session_start();
+    include("connection.php");
 
-    // Recupera o celular do usuário salvo na sessão
-    $celular = $_SESSION["celular"];
+    // Obtenha o celular do jogador dos cookies
+    $celular = $_COOKIE['celular'];
 
-    // Recupera a pontuação enviada pelo JavaScript
-    $pontuacao = $_GET["pontuacao"];
+    // Obtenha a pontuação atual do jogador
+    $pontuacaoAtual = $_GET['pontuacaoAtual'];
 
-    // Prepara a query para inserir a pontuação e o celular no banco de dados
-    
-    $sql = "INSERT INTO `pontuacao-game` (`id`, `celular`, `pontuacao`, `data_jogo`) VALUES (NULL, '$celular', '$pontuacao', CURRENT_DATE());";
+    // Verifique se o jogador já possui uma pontuação registrada
+    $sqlVerificarPontuacao = "SELECT pontuacao FROM cadastros_lp WHERE celular = '$celular'";
+    $result = $conn->query($sqlVerificarPontuacao);
+    $row = $result->fetch_assoc();
 
-    // Executa a query no banco de dados
-    if (mysqli_query($conn, $sql)) {
-        echo "Pontuação salva com sucesso!";
-    } else {
-        echo "Erro ao salvar a pontuação: " . mysqli_error($conn);
-    }
-
-    // Fecha a conexão com o banco de dados
-    mysqli_close($conn);
-
+    if ($row) {
+        // O jogador já possui uma pontuação registrada, verifique se a pontuação atual é maior
+        $pontuacaoRegistrada = $row['pontuacao'];
+        if ($pontuacaoAtual < $pontuacaoRegistrada) {
+            // Atualize a pontuação do jogador na tabela cadastros_lp
+            $sqlAtualizarPontuacao = "UPDATE cadastros_lp SET pontuacao = $pontuacaoAtual WHERE celular = '$celular'";
+            $conn->query($sqlAtualizarPontuacao);
+        };
+    };
 ?>

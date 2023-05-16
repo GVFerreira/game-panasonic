@@ -14,7 +14,7 @@
             <form id="form" action="envio-form.php" method="POST">
                 <h1>valide seu cadastro</h1>
                 <p>Digite apenas números</p>
-                <input type="text" name="celular" id="celular" class="celular" placeholder="Celular: (DD) 91234-5678" required>
+                <input type="text" name="celular" id="celular" class="celular" placeholder="Celular: (DD) 91122-3344" required>
                 <button type="submit">validar</button>
             </form>
         </div>
@@ -28,4 +28,9 @@
             })
         })
     </script>
+    <?php
+        if (isset($_GET['alerta']) && $_GET['alerta'] == 1) {
+            echo '<script defer>alert("Celular não cadastrado. Por favor, faça o seu cadastro.");</script>';
+        };
+    ?>
 </html>

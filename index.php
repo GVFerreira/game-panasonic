@@ -1,4 +1,5 @@
 <?php
+    setcookie("celular", "", time() - 3600, "/");
     session_start();
 ?>
 <!DOCTYPE html>

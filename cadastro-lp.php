@@ -10,11 +10,13 @@
     $resultado = mysqli_query($conn, $consulta);
 
     if(mysqli_num_rows($resultado) > 0) {
-        // o celular já existe na tabela, faça algo aqui (ex: exiba uma mensagem de erro)
-        echo "<p>Celular cadastrado</p>";
+        header("Location: cadastro-vrazor.php?alerta=1");
+        exit();
       } else {
         // o celular não existe na tabela, então podemos inserir o novo registro
-        $query = "INSERT INTO `cadastros_lp` (`id`, `nome`, `sobrenome`, `celular`, `email`, `data_criacao`) VALUES (NULL, '$nome', '$sobrenome', '$celular', '$email', CURRENT_DATE())";
+        $query = "INSERT INTO `cadastros_lp` (`id`, `nome`, `sobrenome`, `celular`, `email`, `pontuacao`, `data_criacao`) VALUES (NULL, '$nome', '$sobrenome', '$celular', '$email', 60, CURRENT_DATE())";
         mysqli_query($conn, $query);
+        header("Location: cadastro-vrazor.php?alerta=0");
+        exit();
       }
 ?>
