@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <title>Desafio V-Razor</title>
         <link rel="stylesheet" href="css/lp.css">
     </head>
@@ -42,9 +42,9 @@
                             <h2><b>PROMOÇÕES E NOVIDADES</b></h2>
                         </div>
                         <form class="form_register" action="cadastro-lp.php" method="post">
-                            <input class="input_style" id="nome" name="nome" type="text" placeholder="Nome" required="required" pattern="[A-Za-z]{1,255}" title="Preencha com seu nome">
+                            <input class="input_style" id="nome" name="nome" type="text" placeholder="Nome" required="required" title="Preencha com seu nome">
 
-                            <input class="input_style" id="sobrenome" name="sobrenome" type="text" placeholder="Sobrenome" required="required" pattern="[A-Za-z]{1,255}" title="Preencha com seu sobrenome">
+                            <input class="input_style" id="sobrenome" name="sobrenome" type="text" placeholder="Sobrenome" required="required" title="Preencha com seu sobrenome">
 
                             <input class="input_style" id="celular" name="celular" type="text" placeholder="Celular" required="required" title="Preencha com um celular válido">
 
@@ -54,6 +54,13 @@
                                 <input class="caixa-check" id="aceitarComunicacao" type="checkbox" nome="aceitarComunicacao" required="required">
                                 <label for="aceitarComunicacao">
                                     Li e aceito as <a href="https://www.panasonic.com/br/politica-de-privacidade.html" target="_blank" class="aceite_termos_anchor">políticas de privacidade</a>.
+                                </label>
+                            </div>
+
+                            <div class="container_checkbox">
+                                <input class="caixa-check" id="aceitarUsoImagem" type="checkbox" nome="aceitarUsoImagem" required="required">
+                                <label for="aceitarUsoImagem">
+                                    Autorizo meu uso de imagem para vídeos institucionais.
                                 </label>
                             </div>
 
@@ -131,11 +138,11 @@
     </script>
     <?php
         if (isset($_GET['alerta']) && $_GET['alerta'] == 0) {
-            echo '<script defer>alert("Cadastro realizado com sucesso.");</script>';
+            echo '<script defer>alert("Cadastro realizado com sucesso. Por favor, dirija-se à fila.");</script>';
         };
 
         if (isset($_GET['alerta']) && $_GET['alerta'] == 1) {
-            echo '<script defer>alert("Já existe um cadastro com esse número de celular.");</script>';
+            echo '<script defer>alert("Já existe um cadastro com esse número de celular. Por favor, dirija-se à fila.");</script>';
         };
     ?>
 </html>

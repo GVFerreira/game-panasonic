@@ -7,6 +7,7 @@
         <meta charset="UTF-8">
         <title>V-Razor Game</title>
         <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     </head>
@@ -16,7 +17,7 @@
             <form id="form" action="envio-form.php" method="POST">
                 <h1>valide seu cadastro</h1>
                 <p>Digite apenas números</p>
-                <input type="text" name="celular" id="inputNumber" class="celular" maxlength="15" placeholder="Celular: (DD) 91122-3344" required>
+                <input type="text" name="celular" id="inputNumber" class="celular" maxlength="15" placeholder="Celular: (DD) 91122-3344" autofocus required>
                 <button type="submit">validar</button>
             </form>
             <div id="numberpad">
@@ -31,7 +32,7 @@
                 <button class="number">9</button>
                 <button id="clear">C</button>
                 <button class="number">0</button>
-                <button></button>
+                <button style="cursor: not-allowed"></button>
             </div>
         </div>
         <script>

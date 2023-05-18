@@ -8,6 +8,7 @@
         <meta charset="UTF-8">
         <title>V-Razor Game</title>
         <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     </head>
     <body id="body-index">
         <div id="container-iniciar">

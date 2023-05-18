@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <title>V-Razor Game</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 </head>
 <body id="body-regras">
     <img id="img-panasonic" src="img/logo-panasonic.svg">
@@ -20,7 +21,7 @@
                 </div>
                 <div>
                     <h2>V-Razor</h2>
-                    <p>140 cliques</p>
+                    <p>100 cliques</p>
                 </div>
             </div>
             <h1>Como jogar</h1>

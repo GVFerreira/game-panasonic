@@ -41,6 +41,12 @@ h1 {
 
 }
 
+h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
 #img-panasonic {
     position: fixed;
     top: 20px;
@@ -208,7 +214,7 @@ h1 {
 }
 
 #body-gameover #container-gameover div {
-    width: 50%;
+    width: 70%;
 }
 
 #body-gameover #container-gameover #ranking {
@@ -282,7 +288,7 @@ h1 {
     text-shadow: 0 0 15px #000;
 }
 
-#body-gameover #container-gameover #restart #minha-pontuacao {
+#body-gameover #container-gameover #restart .spans {
     background-color: #000;
     border-radius: 5px;
     padding: .2rem .5rem;
@@ -292,4 +298,201 @@ h1 {
 #body-gameover #container-gameover #restart button {
     margin: 4rem 0;
     background-color: #000000;
+}
+
+/* === RANKING === */
+#body-ranking {
+    background-image: url('../img/bg-main.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#body-ranking .container-ranking {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #616161;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); 
+    border-radius: 2rem;
+}
+
+#body-ranking .container-ranking .podium {
+    height: 60%;
+    width: 100%;
+    background-color: #051a4f;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#body-ranking .container-ranking .podium h1 {
+    font-size: 5rem;
+    margin: 0 0 4rem 0;
+}
+
+
+#body-ranking .container-ranking .podium .prisegter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#body-ranking .container-ranking .podium .prisegter div {
+    width: 30%;
+    height: 20rem;
+    color: #000 !important;
+}
+
+#body-ranking .container-ranking .podium .prisegter .pri {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(1.7);
+}
+
+#body-ranking .container-ranking .podium .prisegter .pri .crown {
+    width: 40%;
+}
+
+#body-ranking .container-ranking .podium .prisegter .segter {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(1.4);
+}
+
+#body-ranking .container-ranking .classificacao {
+    height: 60%;
+    width: 100%;
+}
+
+#body-ranking .container-ranking .classificacao .posicao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 1.5rem;
+    padding: 1rem 2rem;
+    background-color: #FFF;
+    border-radius: 1rem;
+}
+
+#body-ranking .container-ranking .classificacao .posicao h2 {
+    font-size: 2rem !important;
+    color: #051a4f !important;
+
+}
+
+#body-ranking .img-panasonic {
+    width: 30%;
+    margin: 1rem 0 0 0;
+}
+
+/* === REGRAS ESTÁTICCAS === */
+
+#body-regras-est {
+    background-image: url('../img/bg-main.png');
+    width: 100%;
+}
+
+#body-regras-est #container-regras {
+    width: 100%;
+    height: 90vh;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#body-regras-est #container-regras div {
+    width: 90%;
+}
+
+#body-regras-est #container-regras #box-lista {
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+    border: 1px solid #616161;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); 
+}
+
+#body-regras-est #container-regras #box-lista h1 {
+    font-size: 5rem;
+    margin: 1.5rem 0;
+
+}
+
+#body-regras-est #container-regras #box-lista .regras {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem
+}
+
+#body-regras-est #container-regras #box-lista .regras div {
+    height: 12vh;
+    width: 45%;
+    background-color: #2d2d2d;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #FFF;
+    border-radius: .2rem;
+    padding: 1rem;
+    margin: 1rem .5rem 2.5rem .5rem;
+}
+
+#body-regras-est #container-regras #box-lista .regras div h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#body-regras-est #container-regras #box-lista .regras div p {
+    font-size: 2rem;
+}
+
+
+#body-regras-est #container-regras #box-lista ul {
+    padding: 0 0 0 2rem;
+    margin: 1rem 0;
+    list-style: none;
+}
+
+#body-regras-est #container-regras #box-lista li {
+    font-size: 2.5rem;
+    margin: 0 0 2rem 0;
+
+}
+
+#body-regras-est #container-regras #box-lista button {
+    background-color: #000;
+    margin: 2rem 0 0 0;
+}
+
+#body-regras-est #container-regras #box-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#body-regras-est #container-regras #box-image img {
+    height: 40rem;
 }

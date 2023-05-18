@@ -7,6 +7,7 @@
         <meta charset="UTF-8">
         <title>V-Razor Game</title>
         <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <style>
             #countdown {
                 font-size: 12rem;
@@ -19,5 +20,4 @@
         <div id="countdown"></div>
     </body>
     <script src="./js/game.js"></script>
-    <script src="./js/timer.js"></script>
 </html>

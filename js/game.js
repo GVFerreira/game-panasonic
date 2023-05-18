@@ -30,12 +30,6 @@ function startGame() {
 	
 	const tempoElemento = document.getElementById("tempo")
 	
-	function atualizarTempo() {
-		const agora = Date.now()
-		tempoDecorrido = (agora - tempoInicio) / 1000
-		tempoElemento.textContent = tempoDecorrido.toFixed(3)
-	}
-	
 	function iniciarTimer() {
 		if (!rodando) {
 			rodando = true
@@ -94,8 +88,9 @@ function startGame() {
 				clearInterval(intervalId)
 				const tempoTela = parseFloat(document.getElementById('tempo').innerText).toFixed(3)
 				localStorage.setItem("minha-pontuacao", tempoTela)
+				localStorage.setItem("acertos", botsClicados)
 				let xmlhttp = new XMLHttpRequest()
-				xmlhttp.open("GET", "salvar-pontuacao.php?pontuacaoAtual=" + tempoTela, true)
+				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${tempoTela}&acertos=${botsClicados}`, true)
 				xmlhttp.send()
 				window.location.href = "gameover.php"
 			} else {
@@ -126,8 +121,9 @@ function startGame() {
 				clearInterval(intervalId)
 				const minhaPontuacao = 60.000.toFixed(3)
 				localStorage.setItem("minha-pontuacao", minhaPontuacao)
+				const acertos = window.localStorage.getItem("acertos")
 				let xmlhttp = new XMLHttpRequest()
-				xmlhttp.open("GET", "salvar-pontuacao.php?pontuacaoAtual=" + minhaPontuacao, true)
+				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${minhaPontuacao}&acertos=${acertos}`, true)
 				xmlhttp.send()
 				window.location.href = "gameover.php"
 			}
@@ -138,8 +134,9 @@ function startGame() {
 			tempoFinal = (Date.now() - tempoInicial) / 1000
 			const minhaPontuacao = 60.000.toFixed(3)
 			localStorage.setItem("minha-pontuacao", minhaPontuacao)
+			const acertos = window.localStorage.getItem("acertos")
 			let xmlhttp = new XMLHttpRequest()
-			xmlhttp.open("GET", "salvar-pontuacao.php?pontuacaoAtual=" + minhaPontuacao, true)
+			xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${minhaPontuacao}&acertos=${acertos}`, true)
 			xmlhttp.send()
 			window.location.href = "gameover.php"
 		}, 60 * 1000)
