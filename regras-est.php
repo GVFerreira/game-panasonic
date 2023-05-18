@@ -10,7 +10,7 @@
     <body id="body-regras-est">
         <div id="container-regras">
             <div id="box-lista">
-                <h1 style="text-align: center">ESCANEIE</h1>
+                <h1 style="text-align: center; font-size: 4rem">ESCANEIE</h1>
                 <div style="width: 100%; display: flex; justify-content: center">
                     <img src="./img/qr-code.png" alt="QR Code" width="70%">
                 </div>
@@ -24,7 +24,7 @@
                         <p>100 cliques</p>
                     </div>
                 </div>
-                <h1 style="text-align: center">Como jogar</h1>
+                <h1 style="text-align: center; font-size: 4rem">Como jogar</h1>
                 <ul>
                     <li>
                         Clique em todos os V-Razors.
@@ -33,10 +33,7 @@
                         Faça o desafio no menor tempo que conseguir.
                     </li>
                     <li>
-                        Clique apenas com os indicadores.
-                    </li>
-                    <li>
-                        Dica: seja ágil e esteja atento.
+                        Clique apenas com os dedos indicadores.
                     </li>
                 </ul>
             </div>

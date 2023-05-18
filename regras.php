@@ -33,7 +33,7 @@
                     Faça o desafio no menor tempo que conseguir.
                 </li>
                 <li>
-                    Dica: seja ágil e esteja atento.
+                    Clique apenas com os dedos indicadores.
                 </li>
             </ul>
             <button onclick="window.location.href = 'jogo.php'">jogar</button>

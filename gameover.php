@@ -29,7 +29,7 @@
 
         const acertos = window.localStorage.getItem("acertos")
         const spanAcertos = document.getElementById('acertos')
-        spanPontuacao.innerText = acertos
+        spanAcertos.innerText = acertos
 
     </script>
 </html>

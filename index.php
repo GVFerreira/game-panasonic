@@ -16,5 +16,8 @@
             <button onclick="window.location.href = 'cadastro.php'">começar</button>
         </div>
     </body>
-    <script>localStorage.removeItem('minha-pontuacao')</script>
+    <script>
+        localStorage.removeItem('minha-pontuacao')
+        localStorage.removeItem('acertos')
+    </script>
 </html>

@@ -52,7 +52,6 @@
                             <h2 style="margin: 0">2°</h2>
                             <h3><?php echo $nome . ' ' . $sobrenome; ?></h3>
                             <h3>Tempo: <?php echo number_format($pontuacao, 3); ?></h3>
-                            <h3>Acertos: <?php echo $acertos; ?></h3>
                         </div>
                     <?php
                         } else {
@@ -105,7 +104,6 @@
                             <h2 style="margin: 0">1°</h2>
                             <h3><?php echo $nome . ' ' . $sobrenome; ?></h3>
                             <h3>Tempo: <?php echo number_format($pontuacao, 3); ?></h3>
-                            <h3>Acertos: <?php echo $acertos; ?></h3>
                         </div>
                     <?php
                         } else {
@@ -157,7 +155,6 @@
                             <h2 style="margin: 0">3°</h2>
                             <h3><?php echo $nome . ' ' . $sobrenome; ?></h3>
                             <h3>Tempo: <?php echo number_format($pontuacao, 3); ?></h3>
-                            <h3>Acertos: <?php echo $acertos; ?></h3>
                         </div>
                     <?php
                         } else {
@@ -220,9 +217,6 @@
                         <div>
                             <h2><?php echo number_format($pontuacao, 3); ?> <span style="text-transform: lowercase">s</span></h2>
                         </div>
-                        <div>
-                            <h2>Acertos: <?php echo $acertos; ?></h2>
-                        </div>
                     </div>
                 <?php
                         $colocacao++;
@@ -237,21 +231,21 @@
         </div>
 
         <script>
-            // document.addEventListener('DOMContentLoaded', function() {
-            //         // Variável de controle para verificar se a página já foi atualizada
-            //         var paginaAtualizada = false;
+            document.addEventListener('DOMContentLoaded', function() {
+                    // Variável de controle para verificar se a página já foi atualizada
+                    var paginaAtualizada = false;
 
-            //         // Verificar se a página já foi atualizada antes de executar o redirecionamento
-            //         if (!paginaAtualizada) {
-            //             // Definir a variável para true para evitar atualizações futuras
-            //             paginaAtualizada = true;
+                    // Verificar se a página já foi atualizada antes de executar o redirecionamento
+                    if (!paginaAtualizada) {
+                        // Definir a variável para true para evitar atualizações futuras
+                        paginaAtualizada = true;
 
-            //             // Redirecionar para a página novamente após 5 segundos (5000 milissegundos)
-            //             setTimeout(function() {
-            //                 location.reload();
-            //             }, 5000); // 5 segundos
-            //         }
-            // })
+                        // Redirecionar para a página novamente após 5 segundos (5000 milissegundos)
+                        setTimeout(function() {
+                            location.reload();
+                        }, 5000); // 5 segundos
+                    }
+            })
         </script>
     </body>
 </html>
