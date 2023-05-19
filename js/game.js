@@ -86,7 +86,7 @@ function startGame() {
 		novoBot.onclick = function () {
 			this.remove()
 			botsClicados++
-			if (botsClicados >= 30) {
+			if (botsClicados >= 100) {
 				clearInterval(intervalId)
 
 				audio.pause()
