@@ -34,7 +34,7 @@ function startGame() {
 	function iniciarTimer() {
 		if (!rodando) {
 			rodando = true
-			tempoInicio = Date.now() - (tempoDecorrido * 1000)
+			tempoInicio = Date.now()
 			cronometro = setInterval(atualizarTempo, 1)
 			audio.play()
 		}
