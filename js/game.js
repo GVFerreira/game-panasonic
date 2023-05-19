@@ -92,18 +92,14 @@ function startGame() {
 				audio.pause()
 				
 				const tempoTela = tempoDecorrido.toFixed(3)
-				console.log(`Tempo decorrido: ${tempoTela}`)
 				localStorage.setItem("minha-pontuacao", tempoTela)
-				console.log(`Tempo localStorage: ${localStorage.getItem('minha-pontuacao')}`)
 
 				botsClicados = 100
 				const qtyAcertos = botsClicados
 				localStorage.setItem("acertos", qtyAcertos)
 
-				const tempoStorage = localStorage.getItem('minha-pontuacao')
-
 				let xmlhttp = new XMLHttpRequest()
-				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${tempoStorage}`, true)
+				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${localStorage.setItem("minha-pontuacao")}`, true)
 				xmlhttp.send()
 				window.location.href = "gameover.php"
 			} else {
