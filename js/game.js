@@ -32,9 +32,7 @@ function startGame() {
 	
 	function iniciarTimer() {
 			tempoInicio = Date.now()
-			if (botsClicados <= 100) {
-				cronometro = setInterval(atualizarTempo, 1)
-			}
+			cronometro = setInterval(atualizarTempo, 1)
 			audio.play()
 	}
 	
