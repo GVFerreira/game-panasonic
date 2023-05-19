@@ -116,6 +116,7 @@ function startGame() {
 			tempo++
 			if (tempo >= 60) {
 				clearInterval(intervalId)
+				clearInterval(cronometro)
 
 				audio.pause()
 
