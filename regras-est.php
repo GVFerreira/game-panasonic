@@ -39,7 +39,7 @@
                 <h3>Atenção: Ao iniciar o jogo, sua adrenalina aumentará. Se você tem ansiedade ou ataques de pânico, recomendamos que não jogue.</h3>
             </div>
         </div>
-        <img src="./img/logo-desafio.png" width="30%" alt="">
+        <img src="./img/logo-desafio.png" width="30%" style="margin-top: 50px" alt="">
 
     </body>
 </html>

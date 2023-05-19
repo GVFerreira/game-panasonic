@@ -241,7 +241,7 @@
                 ?>
             </div>
         </div>
-        <img src="./img/logo-desafio.png" width="30%" alt="">
+        <img src="./img/logo-desafio.png" width="30%" style="margin-top: 50px" alt="">
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
