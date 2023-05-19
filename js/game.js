@@ -86,7 +86,7 @@ function startGame() {
 		novoBot.onclick = function () {
 			this.remove()
 			botsClicados++
-			if (botsClicados >= 10) {
+			if (botsClicados >= 100) {
 				clearInterval(intervalId)
 				audio.pause()
 				const tempoTela = parseFloat(document.getElementById('tempo').innerText).toFixed(3)
@@ -121,7 +121,7 @@ function startGame() {
 		intervalId = setInterval(() => {
 			tempo++
 			tempoFinal = (Date.now() - tempoInicial) / 1000
-			if (tempo >= 10) {
+			if (tempo >= 60) {
 				clearInterval(intervalId)
 				audio.pause()
 				const minhaPontuacao = 60.000.toFixed(3)

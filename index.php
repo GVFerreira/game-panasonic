@@ -13,6 +13,8 @@
     <body id="body-index">
         <div id="container-iniciar">
             <img id="img-panasonic" src="img/logo-panasonic.svg" alt="">
+            <img id="gif-panasonic" src="img/v-razor.gif" alt="">
+            <img id="teste" src="img/logo-desafio.png" alt="">
             <button onclick="window.location.href = 'cadastro.php'">começar</button>
         </div>
     </body>

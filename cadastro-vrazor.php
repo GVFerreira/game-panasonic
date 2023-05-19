@@ -38,8 +38,8 @@
                     <div class="right_content">
                         <img class="image-logo" src="https://image.relacionamento.panasonic.com.br/lib/fe3f15707564047e721772/m/2/652be215-57dd-4995-add6-f53831dd3c4f.png">
                         <div class="container-texto">
-                            <h2 class="titulo1">FIQUE POR DENTRO DAS</h2>
-                            <h2><b>PROMOÇÕES E NOVIDADES</b></h2>
+                            <h2 class="titulo1">CADASTRE-SE NO DESAFIO</h2>
+                            <h2><b> PARA PROMOÇÕES E NOVIDADES</b></h2>
                         </div>
                         <form class="form_register" action="cadastro-lp.php" method="post">
                             <input class="input_style" id="nome" name="nome" type="text" placeholder="Nome" required="required" title="Preencha com seu nome">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 </head>
 <body id="body-regras">
-    <img id="img-panasonic" src="img/logo-panasonic.svg">
+    <img id="img-panasonic" src="img/logo-desafio.png">
     <div id="container-regras">
         <div id="box-lista">
             <h1>Regras</h1>
@@ -24,22 +24,23 @@
                     <p>100 cliques</p>
                 </div>
             </div>
-            <h1>Como jogar</h1>
+            <h1>Como jogar:</h1>
             <ul>
                 <li>
-                    Clique em todos os V-Razors.
+                    Clique em todos os V-Razors;
                 </li>
                 <li>
-                    Faça o desafio no menor tempo que conseguir.
+                    Faça o desafio no menor tempo que conseguir;
                 </li>
                 <li>
-                    Clique apenas com os dedos indicadores.
+                    Clique apenas com a ponta dos dedos.
                 </li>
             </ul>
-            <button onclick="window.location.href = 'jogo.php'">jogar</button>
+            <button onclick="window.location.href = 'jogo.php'">jogar</button><br><br>
+            <h3>Atenção: Ao iniciar o jogo, sua adrenalina aumentará. Se você tem ansiedade ou ataques de pânico, recomendamos que não jogue.</h3>
         </div>
         <div id="box-image">
-            <img src="img/vrazor-regras.png" lazy="loading">
+            <img src="img/v-razor.gif" lazy="loading">
         </div>
     </div>
 </body>

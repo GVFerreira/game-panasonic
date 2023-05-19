@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     </head>
     <body id="body-gameover">
-        <img id="img-panasonic" src="img/logo-panasonic.svg">
+        <img id="img-panasonic" src="img/logo-desafio.png">
         <div id="container-gameover">
             <div id="restart">
                 <h1>Fim de jogo...</h1>
