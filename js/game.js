@@ -32,13 +32,16 @@ function startGame() {
 	
 	function iniciarTimer() {
 			tempoInicio = Date.now()
-			cronometro = setInterval(atualizarTempo, 1)
+			if (botsClicados <= 100) {
+				cronometro = setInterval(atualizarTempo, 1)
+			}
 			audio.play()
 	}
 	
 	function atualizarTempo() {
 		const agora = Date.now()
 		tempoDecorrido = (agora - tempoInicio) / 1000
+		localStorage.setItem("minha-pontuacao", tempoDecorrido.toFixed(3))
 		tempoElemento.textContent = tempoDecorrido.toFixed(3)
 	}
 
@@ -83,9 +86,6 @@ function startGame() {
 				clearInterval(intervalId)
 
 				audio.pause()
-				
-				const tempoTela = tempoDecorrido.toFixed(3)
-				localStorage.setItem("minha-pontuacao", tempoTela)
 
 				botsClicados = 100
 				const qtyAcertos = botsClicados
