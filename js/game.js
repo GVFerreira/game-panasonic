@@ -92,7 +92,10 @@ function startGame() {
 				audio.pause()
 				
 				const tempoTela = tempoDecorrido.toFixed(3)
+				console.log(`Tempo decorrido: ${tempoTela}`)
 				localStorage.setItem("minha-pontuacao", tempoTela)
+				console.log(`Tempo localStorage: ${localStorage.getItem('minha-pontuacao')}`)
+
 				botsClicados = 100
 				const qtyAcertos = botsClicados
 				localStorage.setItem("acertos", qtyAcertos)

@@ -7,6 +7,7 @@
 
     // Obtenha a pontuação atual do jogador
     $pontuacaoAtual = $_GET['pontuacaoAtual'];
+    echo "<script>console.log('Valor recebido no BE: " . $pontuacaoAtual')</script>";
 
     // Verifique se o jogador já possui uma pontuação registrada
     $sqlVerificarPontuacao = "SELECT pontuacao FROM cadastros_lp WHERE celular = '$celular'";
@@ -16,7 +17,7 @@
     if ($row) {
         // O jogador já possui uma pontuação registrada, verifique se a pontuação atual é maior
         $pontuacaoRegistrada = $row['pontuacao'];
-        
+
         if ($pontuacaoAtual < $pontuacaoRegistrada) {
             // Atualize a pontuação do jogador na tabela cadastros_lp
             $sqlAtualizarPontuacao = "UPDATE cadastros_lp SET pontuacao = $pontuacaoAtual WHERE celular = '$celular'";
