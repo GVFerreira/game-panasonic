@@ -91,7 +91,7 @@ function startGame() {
 
 				audio.pause()
 				
-				const tempoTela = Number(tempoElemento.textContent).toFixed(3)
+				const tempoTela = tempoDecorrido.toFixed(3)
 				localStorage.setItem("minha-pontuacao", tempoTela)
 				botsClicados = 100
 				const qtyAcertos = botsClicados
