@@ -92,7 +92,7 @@ function startGame() {
 				localStorage.setItem("acertos", qtyAcertos)
 
 				let xmlhttp = new XMLHttpRequest()
-				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${localStorage.setItem("minha-pontuacao")}`, true)
+				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${localStorage.getItem("minha-pontuacao")}`, true)
 				xmlhttp.send()
 				window.location.href = "gameover.php"
 			} else {
