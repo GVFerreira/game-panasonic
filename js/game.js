@@ -19,7 +19,7 @@ function startCountdown() {
   
 	// Inicia a atualização da contagem regressiva
 	updateCountdown()
-  }
+}
   
 // Função para iniciar o jogo
 function startGame() {
@@ -86,15 +86,19 @@ function startGame() {
 		novoBot.onclick = function () {
 			this.remove()
 			botsClicados++
-			if (botsClicados >= 100) {
+			if (botsClicados >= 30) {
 				clearInterval(intervalId)
+
 				audio.pause()
-				const tempoTela = parseFloat(document.getElementById('tempo').innerText).toFixed(3)
-				const qtyAcertos = botsClicados
+				
+				const tempoTela = Number(tempoElemento.textContent).toFixed(3)
 				localStorage.setItem("minha-pontuacao", tempoTela)
+				botsClicados = 100
+				const qtyAcertos = botsClicados
 				localStorage.setItem("acertos", qtyAcertos)
+
 				let xmlhttp = new XMLHttpRequest()
-				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${tempoTela}&acertos=${qtyAcertos}`, true)
+				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${tempoTela}`, true)
 				xmlhttp.send()
 				window.location.href = "gameover.php"
 			} else {
@@ -111,8 +115,6 @@ function startGame() {
 	}
 
 	function iniciarJogo() {
-		let tempoInicial = Date.now()
-		let tempoFinal
 		let tempo = 0
 		intervalId = null
 		botsClicados = 0
@@ -120,33 +122,38 @@ function startGame() {
 
 		intervalId = setInterval(() => {
 			tempo++
-			tempoFinal = (Date.now() - tempoInicial) / 1000
 			if (tempo >= 60) {
 				clearInterval(intervalId)
+
 				audio.pause()
+
 				const minhaPontuacao = 60.000.toFixed(3)
 				localStorage.setItem("minha-pontuacao", minhaPontuacao)
 				const acertos = botsClicados
 				localStorage.setItem("acertos", acertos)
 
 				let xmlhttp = new XMLHttpRequest()
-				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${minhaPontuacao}&acertos=${acertos}`, true)
+				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${minhaPontuacao}`, true)
 				xmlhttp.send()
+
 				window.location.href = "gameover.php"
 			}
 		}, 1000)
 
 		setTimeout(() => {
 			clearInterval(intervalId)
+
 			audio.pause()
-			tempoFinal = (Date.now() - tempoInicial) / 1000
+
 			const minhaPontuacao = 60.000.toFixed(3)
 			localStorage.setItem("minha-pontuacao", minhaPontuacao)
 			const acertos = botsClicados
 			localStorage.setItem("acertos", acertos)
+
 			let xmlhttp = new XMLHttpRequest()
-			xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${minhaPontuacao}&acertos=${acertos}`, true)
+			xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${minhaPontuacao}`, true)
 			xmlhttp.send()
+
 			window.location.href = "gameover.php"
 		}, 60 * 1000)
 	}
