@@ -343,7 +343,7 @@ h2 {
     width: 85%;
     height: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     border: 1px solid #616161;
@@ -354,7 +354,6 @@ h2 {
 }
 
 #body-ranking #container-ranking #podium {
-    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -372,12 +371,23 @@ h2 {
     margin: 3rem 0;
 }
 
+#body-ranking #container-ranking #title-add {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding: 0 4rem;
+}
+
 
 #body-ranking #container-ranking #podium .prisegter {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+}
+
+#body-ranking #container-ranking #podium .prisegter .stage-podium {
+    width: 100%;
 }
 
 #body-ranking #container-ranking #podium .prisegter .pri {
@@ -387,17 +397,14 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: fixed;
-    top: 24%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 0 120px 0;
+
 }
 
 #body-ranking #container-ranking #podium .prisegter .pri h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
-
 }
 
 #body-ranking #container-ranking #podium .prisegter .seg {
@@ -407,10 +414,6 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: fixed;
-    top: 33%;
-    left: 6%;
-    transform: translate(-0%, -80%);
 }
 
 #body-ranking #container-ranking #podium .prisegter .seg h3 {
@@ -426,10 +429,7 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: fixed;
-    top: 36%;
-    right: 6%;
-    transform: translate(-0%, -80%);
+    margin: 50px 0 0 0;
 }
 
 #body-ranking #container-ranking #podium .prisegter .ter h3 {
@@ -439,7 +439,6 @@ h2 {
 }
 
 #body-ranking #container-ranking .classificacao {
-    height: 60%;
     width: 100%;
 }
 

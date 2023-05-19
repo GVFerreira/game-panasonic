@@ -36,8 +36,7 @@
                     Clique apenas com a ponta dos dedos.
                 </li>
             </ul>
-            <button onclick="window.location.href = 'jogo.php'">jogar</button><br><br>
-            <h3>Atenção: Ao iniciar o jogo, sua adrenalina aumentará. Se você tem ansiedade ou ataques de pânico, recomendamos que não jogue.</h3>
+            <button onclick="window.location.href = 'jogo.php'">jogar</button>
         </div>
         <div id="box-image">
             <img src="img/v-razor.gif" lazy="loading">

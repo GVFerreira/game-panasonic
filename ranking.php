@@ -55,6 +55,7 @@
                                     ?>
                                 </h3>
                                 <h3>Tempo: <?php echo number_format($pontuacao, 3); ?></h3>
+                                <img src="./img/silver.png" class="stage-podium" alt="">
                             </div>
                     <?php
                         } else {
@@ -109,6 +110,7 @@
                                 ?>
                             </h3>
                             <h3>Tempo: <?php echo number_format($pontuacao, 3); ?></h3>
+                            <img src="./img/gold.png" class="stage-podium" alt="">
                         </div>
                     <?php
                         } else {
@@ -163,6 +165,7 @@
                                 ?>
                             </h3>
                             <h3>Tempo: <?php echo number_format($pontuacao, 3); ?></h3>
+                            <img src="./img/bronze.png" class="stage-podium" alt="">
                         </div>
                     <?php
                         } else {
@@ -175,7 +178,6 @@
                         $conn->close();
                     ?>
                 </div>
-                <img src="./img/podium.png" id="podium-img" alt="">
             </div>
             <div class="classificacao">
                 <?php
@@ -240,6 +242,7 @@
                     $conn->close();
                 ?>
             </div>
+            <h3 id="title-add">As 3 pessoas que marcarem os melhores tempos serão presenteadas com o Aparador de Pelos Corporal Panasonic V-Razor</h3>
         </div>
         <img src="./img/logo-desafio.png" width="30%" style="margin-top: 50px" alt="">
 
@@ -256,7 +259,7 @@
                     // Redirecionar para a página novamente após 5 segundos (5000 milissegundos)
                     setTimeout(function() {
                         location.reload();
-                    }, 5000); // 5 segundos
+                    }, 3000); // 5 segundos
                 }
             })
         </script>

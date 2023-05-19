@@ -1,8 +1,8 @@
 <?php
     include('connection.php');
 
-    $nome = $_POST["nome"];
-    $sobrenome = $_POST["sobrenome"];
+    $nome = trim($_POST["nome"]);
+    $sobrenome = trim($_POST["sobrenome"]);
     $celular = $_POST["celular"];
     $email = $_POST["email"];
 

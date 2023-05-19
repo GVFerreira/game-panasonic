@@ -46,7 +46,7 @@
 
                             <input class="input_style" id="sobrenome" name="sobrenome" type="text" placeholder="Sobrenome" required="required" title="Preencha com seu sobrenome">
 
-                            <input class="input_style" id="celular" name="celular" type="text" placeholder="Celular" required="required" title="Preencha com um celular válido">
+                            <input class="input_style" id="celular" name="celular" type="text" placeholder="Celular" required="required" inputmode="numeric" title="Preencha com um celular válido">
 
                             <input class="input_style" id="email" name="email" type="email" placeholder="Email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Preencha com um email válido">
 
