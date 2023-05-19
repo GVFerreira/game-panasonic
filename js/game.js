@@ -82,6 +82,7 @@ function startGame() {
 			botsClicados++
 			if (botsClicados >= 100) {
 				clearInterval(intervalId)
+				clearInterval(cronometro)
 
 				audio.pause()
 
@@ -116,7 +117,6 @@ function startGame() {
 			tempo++
 			if (tempo >= 60) {
 				clearInterval(intervalId)
-				clearInterval(cronometro)
 
 				audio.pause()
 
