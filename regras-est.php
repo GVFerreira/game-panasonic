@@ -24,7 +24,7 @@
                         <p>100 cliques</p>
                     </div>
                 </div>
-                <h1 style="font-size: 4rem">Como jogar:</h1>
+                <h1 style="width: 100%; text-align: left; font-size: 4rem">Como jogar:</h1>
                 <ul>
                     <li>
                         Clique em todos os V-Razors;
