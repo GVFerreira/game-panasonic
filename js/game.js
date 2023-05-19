@@ -26,18 +26,14 @@ function startGame() {
 	let tempoInicio = 0
 	let tempoDecorrido = 0
 	let cronometro
-	let rodando = false
 	let audio = document.getElementById("backgroundMusic")
 	
 	const tempoElemento = document.getElementById("tempo")
 	
 	function iniciarTimer() {
-		if (!rodando) {
-			rodando = true
 			tempoInicio = Date.now()
 			cronometro = setInterval(atualizarTempo, 1)
 			audio.play()
-		}
 	}
 	
 	function atualizarTempo() {
@@ -45,9 +41,6 @@ function startGame() {
 		tempoDecorrido = (agora - tempoInicio) / 1000
 		tempoElemento.textContent = tempoDecorrido.toFixed(3)
 	}
-	
-	// adicionamos esta linha para exibir o tempo decorrido assim que a página carregar
-	tempoElemento.textContent = tempoDecorrido.toFixed(3)
 
 	iniciarTimer()
 	
