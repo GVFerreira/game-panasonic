@@ -100,8 +100,10 @@ function startGame() {
 				const qtyAcertos = botsClicados
 				localStorage.setItem("acertos", qtyAcertos)
 
+				const tempoStorage = localStorage.getItem('minha-pontuacao')
+
 				let xmlhttp = new XMLHttpRequest()
-				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${tempoTela}`, true)
+				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${tempoStorage}`, true)
 				xmlhttp.send()
 				window.location.href = "gameover.php"
 			} else {
