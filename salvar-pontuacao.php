@@ -7,7 +7,7 @@
 
     // Obtenha a pontuação atual do jogador
     $pontuacaoAtual = $_GET['pontuacaoAtual'];
-    echo "<script>console.log('Valor recebido no BE: . $pontuacaoAtual')</script>";
+    echo 'Valor passado pelo AJAX: ' . $pontuacaoAtual;
 
     // Verifique se o jogador já possui uma pontuação registrada
     $sqlVerificarPontuacao = "SELECT pontuacao FROM cadastros_lp WHERE celular = '$celular'";
