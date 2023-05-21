@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/lp.css">
+        <link rel="stylesheet" href="./css/lp.css">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
         <title>Desafio V-Razor</title>
     </head>
     <body>
@@ -57,7 +59,7 @@
                             <div class="container_checkbox">
                                 <input class="caixa-check" id="aceitarUsoImagem" type="checkbox" nome="aceitarUsoImagem" required="required">
                                 <label for="aceitarUsoImagem">
-                                    Autorizo meu uso de imagem para vídeos institucionais.
+                                    Autorizo o uso da minha imagem para vídeos institucionais.
                                 </label>
                             </div>
 
@@ -84,7 +86,7 @@
             </article>
         </main>
         
-        <footer>
+        <footer class="d-none">
             <div>
                 <section class="social-media-mobile">
                     <div class="img_social">
@@ -124,8 +126,6 @@
             </div>
         </footer>
     </body>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             $(document).ready(() => {

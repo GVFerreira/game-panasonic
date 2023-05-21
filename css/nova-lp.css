@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'Din';
+    src: url('../font/DINRegular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Din';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1f1f1f;
+}
+
+header img {
+    width: 100%;
+}
+
+header nav {
+    display: none;
+}
+
+main {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .container_l {
+    width: 100%;
+    height: 45vh;
+    background: url('../img/bg-mobile-lp.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+main .container_r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(circle, rgba(4, 37, 83, 1) 0%, rgba(4, 45, 120, 1) 48%, rgba(3, 34, 68, 1) 99%);
+    color: #FFF;
+}
+
+main .container_r .cfyou {
+    width: 70%;
+    margin: 1.5rem 0;
+}
+
+main .container_r .titles {
+    text-align: center;
+    padding: 0 .5rem;
+}
+
+main .container_r .titles .title1 {
+    font-weight: 300;
+    opacity: 85%;
+}
+
+main .container_r .form_register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 2rem;
+    padding: 0 2rem;
+}
+
+main .container_r .form_register .input_style {
+    outline: none;
+    color: #000;
+    width: 100%;
+    height: 3rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    opacity: 1;
+    padding-left: 20px;
+    margin-top: 2rem;
+    font-size: 15px;
+}
+
+main .container_r .form_register .caixa-check[type="checkbox"]:before {
+    background-color: #170054;
+    border: 4px solid #fff;
+}
+
+main .container_r .form_register .container_checkbox {
+    display: flex;
+    width: 100%;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding-top: 1.5rem;
+}
+
+main .container_r .form_register .container_checkbox label {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 0 0 1rem;
+} 
+
+main .container_r .form_register .container_checkbox label a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    cursor: pointer;
+} 
+
+/* BOTAO CADASTRO */
+main .container_r .form_register .enviar_form_aceite {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+main .container_r .form_register .botao_cadastro {
+    cursor: pointer;
+    width: 100%;
+    height: 3rem;
+    background-color: #ECE83B;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 25px;
+    font-size: large;
+    font-weight: bold;
+    transition: all 0.5s;
+    color: #3E3F42;
+}
+
+footer {
+    background: #262626;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+footer .social-media-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+footer .social-media-mobile .img_social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social-media-mobile .img_social a {
+    display: block;
+}
+
+footer .social-media-mobile .img_social a img {
+    width: 70%;
+}
+
+footer .footer-items-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-items-mobile a {
+    text-align: center;
+    font-weight: 550;
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+    margin: 0 0 1rem 0;
+    color: white;
+    text-decoration: none;
+}
+
+footer .legal-text-mobile {
+    color: #eee;
+    opacity: 50%;
+    margin-top: 2rem;
+}
