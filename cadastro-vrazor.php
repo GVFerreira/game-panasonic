@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta name="ROBOTS" content="INDEX,FOLLOW">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-        <title>Desafio V-Razor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/lp.css">
+        <title>Desafio V-Razor</title>
     </head>
     <body>
         <header>
             <nav>
-                <a class="logo" href="https://loja.panasonic.com.br/" target="_blank">
+                <a class="logo" href="https://loja.panasonic.com.br/">
                     <img src="https://image.relacionamento.panasonic.com.br/lib/fe3f15707564047e721772/m/2/5bf3213a-d4e2-4780-880d-615534f08de7.png" alt="Panasonic" srcset="">
                 </a>
                 <ul class="navlist">
