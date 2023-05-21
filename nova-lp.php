@@ -39,16 +39,16 @@
                 </div>
 
                 <form class="form_register" action="cadastro-lp.php" method="post">
-                    <input class="input_style" id="nome" name="nome" type="text" placeholder="Nome" required="required" title="Preencha com seu nome">
+                    <input type="text" class="input_style" id="nome" name="nome" placeholder="Nome" title="Preencha com seu nome" required>
 
-                    <input class="input_style" id="sobrenome" name="sobrenome" type="text" placeholder="Sobrenome" required="required" title="Preencha com seu sobrenome">
+                    <input type="text" class="input_style" id="sobrenome" name="sobrenome" placeholder="Sobrenome" title="Preencha com seu sobrenome" required>
 
-                    <input class="input_style" id="celular" name="celular" type="text" placeholder="Celular" required="required" inputmode="numeric" title="Preencha com um celular válido">
+                    <input type="text" class="input_style" id="celular" name="celular" placeholder="Celular" inputmode="numeric" title="Preencha com um celular válido" required>
 
-                    <input class="input_style" id="email" name="email" type="email" placeholder="Email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Preencha com um email válido">
+                    <input type="email" class="input_style" id="email" name="email" placeholder="Email" title="Preencha com um email válido" required>
 
                     <div class="container_checkbox">
-                        <input class="caixa-check" id="aceitarComunicacao" type="checkbox" nome="aceitarComunicacao" required="required">
+                        <input class="caixa-check" id="aceitarComunicacao" type="checkbox" nome="aceitarComunicacao" required>
                         <label for="aceitarComunicacao">
                             Li e aceito as <a href="https://www.panasonic.com/br/politica-de-privacidade.html" target="_blank" class="aceite_termos_anchor">políticas de privacidade</a>.
                         </label>
@@ -90,12 +90,12 @@
                     </a>
                 </div>
             </section>
+
             <section class="footer-items-mobile">
                 <a href="https://www.panasonic.com/br/politica-de-privacidade.html" target="_blank">Política de privacidade</a>
-            </section>
-            <section class="footer-items-mobile">
                 <a href="https://panasonic-br.zendesk.com/hc/pt-br/categories/360003428072-Compras-na-Loja-online-Panasonic-Panasonic-Store" target="_blank">Contato</a>
             </section>
+
             <section class="legal-text-mobile">
                 <p>
                     © Copyright 2022 Panasonic. Panasonic do Brasil LTDA. – CNPJ/MF 56.991.441/0001-57 - Sede: Avenida do Café, 277, Torre A São Paulo - SP - CEP 04311-900 - Fale conosco: www.loja.panasonic.com.br. Todos os preços e condições deste site são válidos apenas
