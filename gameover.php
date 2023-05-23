@@ -37,6 +37,6 @@
         }
 
         // Chama a função após 3 segundos (3000 milissegundos)
-        setTimeout(habilitarBotao, 3000);
+        setTimeout(habilitarBotao, 5000);
     </script>
 </html>

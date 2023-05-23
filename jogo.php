@@ -17,7 +17,7 @@
         </style>
     </head>
     <body id="body-jogo" onresize="tamanhoTela()">
-        <audio id="backgroundMusic" src="./img/music.mpeg"></audio>
+        <audio id="backgroundMusic" src="./img/music.mp4"></audio>
 
         <p id="tempo">0.000</p>
         <div id="countdown"></div>
