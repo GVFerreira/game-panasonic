@@ -54,8 +54,8 @@
                                         echo $nome . ' ' . $ultimoSobrenome;
                                     ?>
                                 </h3>
-                                <h3>Tempo: <?php echo number_format($pontuacao, 3); ?></h3>
-                                <img src="./img/silver.png" class="stage-podium" alt="">
+                                <h3>Tempo: <?php echo number_format($pontuacao, 3); ?> <span style="text-transform: lowercase">s</span></h3>
+                                <img src="./img/silver.webp" class="stage-podium" alt="">
                             </div>
                     <?php
                         } else {
@@ -109,8 +109,8 @@
                                     echo $nome . ' ' . $ultimoSobrenome;
                                 ?>
                             </h3>
-                            <h3>Tempo: <?php echo number_format($pontuacao, 3); ?></h3>
-                            <img src="./img/gold.png" class="stage-podium" alt="">
+                            <h3>Tempo: <?php echo number_format($pontuacao, 3); ?> <span style="text-transform: lowercase">s</span></h3>
+                            <img src="./img/gold.webp" class="stage-podium" alt="">
                         </div>
                     <?php
                         } else {
@@ -164,8 +164,8 @@
                                     echo $nome . ' ' . $ultimoSobrenome;
                                 ?>
                             </h3>
-                            <h3>Tempo: <?php echo number_format($pontuacao, 3); ?></h3>
-                            <img src="./img/bronze.png" class="stage-podium" alt="">
+                            <h3>Tempo: <?php echo number_format($pontuacao, 3); ?> <span style="text-transform: lowercase">s</span></h3>
+                            <img src="./img/bronze.webp" class="stage-podium" alt="">
                         </div>
                     <?php
                         } else {
