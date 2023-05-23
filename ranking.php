@@ -230,7 +230,7 @@
                             </h2>
                         </div>
                         <div>
-                            <h2><?php echo number_format($pontuacao, 3); ?> <span style="text-transform: lowercase">s</span></h2>
+                            <h2><?php echo number_format($pontuacao, 3); ?> <span style="text-transform: lowercase; color: #001526">s</span></h2>
                         </div>
                     </div>
                 <?php
