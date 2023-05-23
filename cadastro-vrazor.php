@@ -13,15 +13,17 @@
                 <img src="https://image.relacionamento.panasonic.com.br/lib/fe3f15707564047e721772/m/2/5bf3213a-d4e2-4780-880d-615534f08de7.png" alt="Panasonic">
             </a>
             <nav>
-                <li>
-                    <a href="https://loja.panasonic.com.br/cozinha" target="_blank">Cozinha</a>
-                </li>
-                <li>
-                    <a href="https://loja.panasonic.com.br/lavanderia" target="_blank">Lavanderia</a>
-                </li>
-                <li>
-                    <a href="https://loja.panasonic.com.br/cuidados-pessoais" target="_blank">Cuidados Pessoais</a>
-                </li>
+                <ul>
+                    <li>
+                        <a href="https://loja.panasonic.com.br/cozinha" target="_blank">Cozinha</a>
+                    </li>
+                    <li>
+                        <a href="https://loja.panasonic.com.br/lavanderia" target="_blank">Lavanderia</a>
+                    </li>
+                    <li>
+                        <a href="https://loja.panasonic.com.br/cuidados-pessoais" target="_blank">Cuidados Pessoais</a>
+                    </li>
+                </ul>
             </nav>
         </header>
         <main>
