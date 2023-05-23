@@ -212,6 +212,7 @@ h2 {
 /* === JOGO === */
 #body-jogo {
     background-image: url('../img/bg-main.webp');
+    zoom: 1;
 }
 
 #body-jogo #tempo {
