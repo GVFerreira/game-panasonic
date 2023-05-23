@@ -18,7 +18,7 @@
                 <h1>Fim de jogo...</h1>
                 <p>Seu tempo: <span id="minha-pontuacao" class="spans"></span> segundos</p>
                 <p>Quantidade de acertos: <span id="acertos" class="spans"></span> cliques</p>
-                <button id="btn-restart" onclick="window.location.href = 'index.php'">reiniciar</button>
+                <button id="btn-restart" onclick="window.location.href = 'index.php'" disabled>reiniciar</button>
             </div>
         </div>
     </body>
@@ -30,6 +30,13 @@
         const acertos = window.localStorage.getItem("acertos")
         const spanAcertos = document.getElementById('acertos')
         spanAcertos.innerText = acertos
+        
+        function habilitarBotao() {
+            var botao = document.getElementById("btn-restart");
+            botao.disabled = false;
+        }
 
+        // Chama a função após 3 segundos (3000 milissegundos)
+        setTimeout(habilitarBotao, 3000);
     </script>
 </html>

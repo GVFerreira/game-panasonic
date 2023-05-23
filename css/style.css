@@ -245,58 +245,6 @@ h2 {
     width: 70%;
 }
 
-#body-gameover #container-gameover #ranking {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: scale(1.5);
-}
-
-#body-gameover #container-gameover #ranking h1 {
-    text-align: center;
-    text-shadow: 0 0 15px #000;
-    margin: 0 0 .5rem 0;
-}
-
-#body-gameover #container-gameover table {
-    border: 1px solid #ccc;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-#body-gameover #container-gameover table thead {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-  
-#body-gameover #container-gameover table th {
-    color:#000;
-    text-align: center;
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ccc;
-}
-  
-#body-gameover #container-gameover table td {
-    padding: 12px;
-    text-align: center;
-    background-color: #000;
-    border: 1px solid #ccc;
-}
-  
-#body-gameover #container-gameover table td:first-child {
-    font-weight: bold;
-}
-  
-#body-gameover #container-gameover table tbody tr:first-child td {
-    border-top: none;
-}
-  
-#body-gameover #container-gameover table tbody tr:last-child td {
-    border-bottom: none;
-}
-
 #body-gameover #container-gameover #restart {
     display: flex;
     flex-direction: column; 
@@ -314,6 +262,7 @@ h2 {
     font-size: 3rem;
     font-weight: bold;
     text-shadow: 0 0 15px #000;
+    margin: .7rem
 }
 
 #body-gameover #container-gameover #restart .spans {
@@ -326,7 +275,15 @@ h2 {
 #body-gameover #container-gameover #restart button {
     margin: 4rem 0;
     background-color: #000000;
+    transition: 500ms;
 }
+
+#body-gameover #container-gameover #restart button:disabled {
+    background-color: #767676;
+    border: none;
+    color: #444444 !important;
+}
+
 
 /* === RANKING === */
 #body-ranking {
