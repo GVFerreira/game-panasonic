@@ -19,6 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../img/bg-main.webp');
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -74,7 +75,6 @@ h2 {
 
 /* === INDEX === */
 #body-index {
-    background-image: url('../img/bg-main.webp');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,9 +91,9 @@ h2 {
 }
 
 /* === CADASTRO === */
-#body-cadastro {
-    background-image: url('../img/bg-main.webp');
-}
+/* #body-cadastro {
+
+} */
 
 #body-cadastro #form {
     box-shadow: 0 0 20px #000;
@@ -133,7 +133,6 @@ h2 {
 
 /* === REGRAS === */
 #body-regras {
-    background-image: url('../img/bg-main.webp');
     width: 100%;
 }
 
@@ -211,7 +210,6 @@ h2 {
 
 /* === JOGO === */
 #body-jogo {
-    background-image: url('../img/bg-main.webp');
     zoom: 1;
 }
 
@@ -229,9 +227,9 @@ h2 {
 
 
 /* === GAME OVER === */
-#body-gameover {
-    background-image: url('../img/bg-main.webp');
-}
+/* #body-gameover {
+
+} */
 
 #body-gameover #container-gameover {
     display: flex;
@@ -287,7 +285,6 @@ h2 {
 
 /* === RANKING === */
 #body-ranking {
-    background-image: url('../img/bg-main.webp');
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -425,7 +422,6 @@ h2 {
 /* === REGRAS ESTÁTICCAS === */
 
 #body-regras-est {
-    background-image: url('../img/bg-main.webp');
     display: flex;
     flex-direction: column;
     justify-content: center;
