@@ -84,6 +84,20 @@ main .container_r .form_register {
     padding: 0 2rem;
 }
 
+main .container_r .form_register .input_group_tel {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+
+main .container_r .form_register .input_group_tel select {
+    width: 30%;
+}
+
+main .container_r .form_register .input_group_tel input {
+    width: 70%;
+}
+
 main .container_r .form_register .input_style {
     color: #000;
     width: 100%;

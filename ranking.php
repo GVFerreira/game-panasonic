@@ -18,13 +18,13 @@
                     
                         // Consulta para obter a posição específica no ranking
                         $sql = "
-                            SELECT nome, sobrenome, pontuacao, acertos
+                            SELECT nome, sobrenome, pontuacao
                             FROM (
-                                SELECT nome, sobrenome, pontuacao, acertos,
+                                SELECT nome, sobrenome, pontuacao,
                                     (@row_number := @row_number + 1) AS ranking_position
                                 FROM cadastros_lp
                                 CROSS JOIN (SELECT @row_number := 0) AS rn
-                                ORDER BY pontuacao ASC, acertos DESC
+                                ORDER BY pontuacao ASC
                             ) AS ranking
                             WHERE ranking_position = ?
                         ";
@@ -44,14 +44,15 @@
                             $nome = $row['nome'];
                             $sobrenome = $row['sobrenome'];
                             $pontuacao = $row['pontuacao'];
-                            $acertos = $row['acertos'];
                     ?>
                             <div class="seg">
                                 <h3>
                                     <?php
+                                        $partesNome = explode(" ", $nome);
                                         $partesSobrenome = explode(" ", $sobrenome);
+                                        $primeiroNome = $partesNome[0];
                                         $ultimoSobrenome = end($partesSobrenome);
-                                        echo $nome . ' ' . $ultimoSobrenome;
+                                        echo $primeiroNome . ' ' . $ultimoSobrenome;
                                     ?>
                                 </h3>
                                 <h3>Tempo: <?php echo number_format($pontuacao, 3); ?> <span style="text-transform: lowercase">s</span></h3>
@@ -73,13 +74,13 @@
                     
                         // Consulta para obter a posição específica no ranking
                         $sql = "
-                            SELECT nome, sobrenome, pontuacao, acertos
+                            SELECT nome, sobrenome, pontuacao
                             FROM (
-                                SELECT nome, sobrenome, pontuacao, acertos,
+                                SELECT nome, sobrenome, pontuacao
                                     (@row_number := @row_number + 1) AS ranking_position
                                 FROM cadastros_lp
                                 CROSS JOIN (SELECT @row_number := 0) AS rn
-                                ORDER BY pontuacao ASC, acertos DESC
+                                ORDER BY pontuacao ASC
                             ) AS ranking
                             WHERE ranking_position = ?
                         ";
@@ -99,14 +100,15 @@
                             $nome = $row['nome'];
                             $sobrenome = $row['sobrenome'];
                             $pontuacao = $row['pontuacao'];
-                            $acertos = $row['acertos'];
                     ?>
                         <div class="pri">
                              <h3>
                                 <?php
+                                    $partesNome = explode(" ", $nome);
                                     $partesSobrenome = explode(" ", $sobrenome);
+                                    $primeiroNome = $partesNome[0];
                                     $ultimoSobrenome = end($partesSobrenome);
-                                    echo $nome . ' ' . $ultimoSobrenome;
+                                    echo $primeiroNome . ' ' . $ultimoSobrenome;
                                 ?>
                             </h3>
                             <h3>Tempo: <?php echo number_format($pontuacao, 3); ?> <span style="text-transform: lowercase">s</span></h3>
@@ -128,13 +130,13 @@
                     
                         // Consulta para obter a posição específica no ranking
                         $sql = "
-                            SELECT nome, sobrenome, pontuacao, acertos
+                            SELECT nome, sobrenome, pontuacao
                             FROM (
-                                SELECT nome, sobrenome, pontuacao, acertos,
+                                SELECT nome, sobrenome, pontuacao
                                     (@row_number := @row_number + 1) AS ranking_position
                                 FROM cadastros_lp
                                 CROSS JOIN (SELECT @row_number := 0) AS rn
-                                ORDER BY pontuacao ASC, acertos DESC
+                                ORDER BY pontuacao ASC
                             ) AS ranking
                             WHERE ranking_position = ?
                         ";
@@ -154,14 +156,15 @@
                             $nome = $row['nome'];
                             $sobrenome = $row['sobrenome'];
                             $pontuacao = $row['pontuacao'];
-                            $acertos = $row['acertos'];
                     ?>
                         <div class="ter">
                              <h3>
                                 <?php
+                                    $partesNome = explode(" ", $nome);
                                     $partesSobrenome = explode(" ", $sobrenome);
+                                    $primeiroNome = $partesNome[0];
                                     $ultimoSobrenome = end($partesSobrenome);
-                                    echo $nome . ' ' . $ultimoSobrenome;
+                                    echo $primeiroNome . ' ' . $ultimoSobrenome;
                                 ?>
                             </h3>
                             <h3>Tempo: <?php echo number_format($pontuacao, 3); ?> <span style="text-transform: lowercase">s</span></h3>
@@ -187,13 +190,13 @@
                 
                     // Consulta para obter as posições do 4° ao 10° no ranking
                     $sql = "
-                        SELECT nome, sobrenome, pontuacao, acertos
+                        SELECT nome, sobrenome, pontuacao
                         FROM (
-                            SELECT nome, sobrenome, pontuacao, acertos,
+                            SELECT nome, sobrenome, pontuacao
                                 (@row_number := @row_number + 1) AS ranking_position
                             FROM cadastros_lp
                             CROSS JOIN (SELECT @row_number := 0) AS rn
-                            ORDER BY pontuacao ASC, acertos DESC
+                            ORDER BY pontuacao ASC
                         ) AS ranking
                         WHERE ranking_position BETWEEN ? AND ?
                     ";
@@ -214,7 +217,6 @@
                         $nome = $row['nome'];
                         $sobrenome = $row['sobrenome'];
                         $pontuacao = $row['pontuacao'];
-                        $acertos = $row['acertos'];
                 ?>
                     <div class="posicao">
                         <div>
@@ -223,9 +225,11 @@
                         <div>
                              <h2>
                                 <?php
+                                    $partesNome = explode(" ", $nome);
                                     $partesSobrenome = explode(" ", $sobrenome);
+                                    $primeiroNome = $partesNome[0];
                                     $ultimoSobrenome = end($partesSobrenome);
-                                    echo $nome . ' ' . $ultimoSobrenome;
+                                    echo $primeiroNome . ' ' . $ultimoSobrenome;
                                 ?>
                             </h2>
                         </div>

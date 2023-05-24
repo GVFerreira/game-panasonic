@@ -113,10 +113,32 @@ h2 {
     margin-top: 2rem;
 }
 
-#body-cadastro #form input {
+#body-cadastro #form .input_group_tel {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#body-cadastro #form .input_group_tel select {
+    background-color: #FFF;
+    font-size: 1rem !important;
+    width: 30%;
+}
+
+#body-cadastro #form .input_group_tel select option {
+    color: #000 !important
+}
+
+#body-cadastro #form .input_group_tel input {
+    width: 70%;
+}
+
+#body-cadastro #form .input_group_tel select,
+#body-cadastro #form .input_group_tel input {
     margin: .2rem 0 2rem 0;
     height: 3rem;
-    width: 80%;
     display: inline;
     padding: 1rem;
     font-size: 1.5rem;
