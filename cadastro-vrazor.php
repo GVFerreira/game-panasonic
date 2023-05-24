@@ -34,7 +34,8 @@
 
                 <div class="titles">
                     <h2 class="title1">CADASTRE-SE NO DESAFIO</h2>
-                    <h2 class="title2"><b>PARA PROMOÇÕES E NOVIDADES</b></h2>
+                    <h2 class="title2"><b>PARA JOGAR E RECEBER</b></h2>
+                    <h2 class="title2"><b>NOVIDADES DA PANASONIC</b></h2>
                 </div>
 
                 <form class="form_register" action="cadastro-lp.php" method="post">
