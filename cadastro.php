@@ -276,25 +276,6 @@
             clearButton.addEventListener("click", function() {
                 inputNumber.value = ""
             })
-
-            // Aplica a máscara ao valor inserido
-            function applyMask() {
-                var value = inputNumber.value.replace(/\D/g, "")
-                var formattedValue = ""
-                var count = 0
-                for (var i = 0; i < value.length; i++) {
-                    if (count === 0) {
-                        formattedValue += "("
-                    } else if (count === 2) {
-                        formattedValue += ") "
-                    } else if (count === 7) {
-                        formattedValue += "-"
-                    }
-                    formattedValue += value[i]
-                    count++
-                }
-                inputNumber.value = formattedValue.substring(0, 15)
-            }
         </script>
 
         <?php
