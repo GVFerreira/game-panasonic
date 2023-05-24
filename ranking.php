@@ -76,7 +76,7 @@
                         $sql = "
                             SELECT nome, sobrenome, pontuacao
                             FROM (
-                                SELECT nome, sobrenome, pontuacao
+                                SELECT nome, sobrenome, pontuacao,
                                     (@row_number := @row_number + 1) AS ranking_position
                                 FROM cadastros_lp
                                 CROSS JOIN (SELECT @row_number := 0) AS rn
@@ -132,7 +132,7 @@
                         $sql = "
                             SELECT nome, sobrenome, pontuacao
                             FROM (
-                                SELECT nome, sobrenome, pontuacao
+                                SELECT nome, sobrenome, pontuacao,
                                     (@row_number := @row_number + 1) AS ranking_position
                                 FROM cadastros_lp
                                 CROSS JOIN (SELECT @row_number := 0) AS rn
@@ -192,7 +192,7 @@
                     $sql = "
                         SELECT nome, sobrenome, pontuacao
                         FROM (
-                            SELECT nome, sobrenome, pontuacao
+                            SELECT nome, sobrenome, pontuacao,
                                 (@row_number := @row_number + 1) AS ranking_position
                             FROM cadastros_lp
                             CROSS JOIN (SELECT @row_number := 0) AS rn
