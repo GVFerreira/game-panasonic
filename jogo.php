@@ -39,11 +39,10 @@
         // Desabilitar a funcionalidade de arrastar para avançar ou voltar a página no Chrome
         window.addEventListener('load', function() {
             function disableBackSwipe(event) {
-                event.preventDefault();
+                event.preventDefault()
             }
-            
-            window.addEventListener('touchstart', disableBackSwipe, { passive: false });
-            window.addEventListener('touchmove', disableBackSwipe, { passive: false });
-        });
+
+            window.addEventListener('touchmove', disableBackSwipe, { passive: false })
+        })
     </script>
 </html>
