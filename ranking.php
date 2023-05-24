@@ -242,7 +242,7 @@
                     $conn->close();
                 ?>
             </div>
-            <h3 id="title-add">As 3 pessoas que marcarem os melhores tempos serão presenteadas com o Aparador de Pêlos Corporais Panasonic V-Razor</h3>
+            <h3 id="title-add">As 3 pessoas que marcarem os melhores tempos serão presenteadas com o Aparador de Pelos Corporais Panasonic V-Razor</h3>
         </div>
         <img src="./img/logo-desafio.png" width="30%" style="margin-top: 50px" alt="">
 

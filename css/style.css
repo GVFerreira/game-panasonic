@@ -333,7 +333,6 @@ h2 {
     padding: 0 4rem;
 }
 
-
 #body-ranking #container-ranking #podium .prisegter {
     width: 100%;
     display: flex;
@@ -519,4 +518,11 @@ h2 {
 
 #body-regras-est #container-regras #box-image img {
     height: 40rem;
+}
+
+#body-regras-est #container-regras #title-add {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding: 0 4rem;
 }

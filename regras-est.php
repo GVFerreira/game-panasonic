@@ -36,6 +36,7 @@
                         Clique apenas com a ponta dos dedos.
                     </li>
                 </ul>
+                <h3 id="title-add">As 3 pessoas que marcarem os melhores tempos serão presenteadas com o Aparador de Pelos Corporais Panasonic V-Razor</h3>
             </div>
         </div>
         <img src="./img/logo-desafio.png" width="30%" style="margin-top: 50px" alt="">
