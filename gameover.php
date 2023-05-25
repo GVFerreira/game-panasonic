@@ -38,5 +38,9 @@
 
         // Chama a função após 3 segundos (3000 milissegundos)
         setTimeout(habilitarBotao, 5000);
+
+        setTimeout(() => {
+           window.location.href = 'index.php' 
+        }, 15 * 1000)
     </script>
 </html>

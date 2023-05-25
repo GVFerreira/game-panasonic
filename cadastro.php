@@ -234,7 +234,7 @@
                         <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                         <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
                     </select>
-                    <input type="text" name="celular" id="inputNumber" class="celular" maxlength="11" placeholder="Celular: DD911223344" autocomplete="off" autofocus required>
+                    <input type="text" name="celular" id="inputNumber" class="celular" maxlength="11" placeholder="Celular: (DDD) 91122-3344" autocomplete="off" autofocus required>
                 </div>
                 <button type="submit">validar</button>
             </form>
