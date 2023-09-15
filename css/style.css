@@ -1,15 +1,13 @@
 @font-face {
-    font-family: 'Din';
-    src:
-        url('../font/DINRegular.ttf') format('truetype')
-
+    font-family: 'Source Sans Pro';
+    src: url('../font/SourceSansPro-Regular.ttf') format('truetype');
 }
 
 * {
-    font-family: 'Din';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
     color: #FFF;
 }
 
@@ -133,6 +131,7 @@ h2 {
 
 #body-cadastro #form .input_group_tel input {
     width: 70%;
+    font-size: 1.25rem;
 }
 
 #body-cadastro #form .input_group_tel select,
@@ -141,7 +140,6 @@ h2 {
     height: 3rem;
     display: inline;
     padding: 1rem;
-    font-size: 1.5rem;
     border-radius: 5px;
     border: none;
     color: #000;
@@ -150,6 +148,17 @@ h2 {
 #body-cadastro #form button {
     background-color: #FFF;
     border: 1px solid #000;
+    color: #000;
+}
+
+#numberpad {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#numberpad button {
     color: #000;
 }
 

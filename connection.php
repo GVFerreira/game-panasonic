@@ -1,8 +1,8 @@
 <?php
     // Conectar ao banco de dados
     $servername = "localhost";
-    $username = "gustavo_admin";
-    $password = "Ez**CmxTPiBFYerT";
+    $username = "root";
+    $password = "";
     $dbname = "game-panasonic";
 
     $conn = new mysqli($servername, $username, $password, $dbname);

@@ -12,10 +12,10 @@
     </head>
     <body id="body-index">
         <div id="container-iniciar">
-            <img id="img-panasonic" src="img/logo-panasonic.svg" alt="">
-            <img id="gif-panasonic" src="img/v-razor.gif" alt="">
-            <img id="teste" src="img/logo-desafio.png" alt="">
-            <button onclick="window.location.href = 'cadastro.php'">começar</button>
+            <img id="img-panasonic" src="img/logo-panasonic.svg" alt="Panasonic">
+            <img id="gif-panasonic" src="img/v-razor.gif" alt="Animação V-Razor">
+            <img id="teste" src="img/logo-desafio.png" alt="Desafio Panasonic V-Razor - Precisão para você ir além dos seus limites">
+            <button onclick="window.location.href = 'cadastro'">começar</button>
         </div>
     </body>
     <script>

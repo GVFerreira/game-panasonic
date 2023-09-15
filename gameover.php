@@ -18,7 +18,7 @@
                 <h1>Fim de jogo...</h1>
                 <p>Seu tempo: <span id="minha-pontuacao" class="spans"></span> segundos</p>
                 <p>Quantidade de acertos: <span id="acertos" class="spans"></span> cliques</p>
-                <button id="btn-restart" onclick="window.location.href = 'index.php'" disabled>reiniciar</button>
+                <button id="btn-restart" onclick="window.location.href = 'index'" disabled>reiniciar</button>
             </div>
         </div>
     </body>
@@ -40,7 +40,7 @@
         setTimeout(habilitarBotao, 5000);
 
         setTimeout(() => {
-           window.location.href = 'index.php' 
+           window.location.href = 'index' 
         }, 15 * 1000)
     </script>
 </html>

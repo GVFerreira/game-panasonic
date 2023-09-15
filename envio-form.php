@@ -13,10 +13,10 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows == 0) {
-        header("Location: cadastro.php?alerta=1");
+        header("Location: cadastro?alerta=1");
         exit();
     } else {
-        header("Location: regras.php");
+        header("Location: regras");
         exit();
     }
 

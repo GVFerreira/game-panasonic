@@ -14,7 +14,7 @@
     <body id="body-cadastro">
         <img id="img-panasonic" src="img/logo-panasonic.svg">
         <div id="container-cadastro">
-            <form id="form" action="envio-form.php" method="POST" autocomplete="off">
+            <form id="form" action="envio-form" method="POST" autocomplete="off">
                 <h1>valide seu cadastro</h1>
                 <p>Digite apenas números</p>
                 <div class="input_group_tel">
@@ -234,7 +234,7 @@
                         <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                         <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
                     </select>
-                    <input type="text" name="celular" id="inputNumber" class="celular" maxlength="11" placeholder="Celular: (DDD) 91122-3344" autocomplete="off" autofocus required>
+                    <input type="text" name="celular" id="inputNumber" class="celular" maxlength="11" placeholder="(11) 92233-4455" autocomplete="off" autofocus required>
                 </div>
                 <button type="submit">validar</button>
             </form>
@@ -248,33 +248,48 @@
                 <button class="number">7</button>
                 <button class="number">8</button>
                 <button class="number">9</button>
-                <button style="cursor: not-allowed"></button>
-                <button class="number">0</button>
                 <button id="clear">LIMPAR</button>
+                <button class="number">0</button>
+                <button id="backspace" onclick="apagarUltimoNumero()">
+                    <img src="./img/backspace.svg" width="25rem" alt="APAGAR">
+                </button>
             </div>
         </div>
         <script>
             // Obtém o elemento de entrada de texto
-            var inputNumber = document.getElementById("inputNumber")
+            let inputNumber = document.getElementById("inputNumber")
 
             // Obtém todos os botões numéricos
-            var numberButtons = document.getElementsByClassName("number")
+            let numberButtons = document.getElementsByClassName("number")
 
             // Percorre todos os botões numéricos e adiciona um evento de clique
-            for (var i = 0; i < numberButtons.length; i++) {
+            for (let i = 0; i < numberButtons.length; i++) {
                 numberButtons[i].addEventListener("click", function() {
-                    var number = this.textContent
-                    inputNumber.value += number
-                    applyMask()
+                    if (inputNumber.value.length < 11) {
+                        let number = this.textContent
+                        inputNumber.value += number
+                    }
                 })
             }
 
+            // Apaga o último caracter
+            function apagarUltimoNumero() {
+
+                let valorInputNumber = inputNumber.value
+
+                if (valorInputNumber.length > 0) {
+                    valorInputNumber = valorInputNumber.slice(0, -1);
+                    inputNumber.value = valorInputNumber;
+                }
+            }
+
             // Obtém o botão de limpar (Clear)
-            var clearButton = document.getElementById("clear")
+            let clearButton = document.getElementById("clear")
 
             // Adiciona um evento de clique para limpar o número digitado
             clearButton.addEventListener("click", function() {
                 inputNumber.value = ""
+                inputNumber.autofocus = "on"
             })
         </script>
 
@@ -284,16 +299,4 @@
             };
         ?>
     </body>
-    <style>
-        #numberpad {
-            margin-top: 3rem;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-        }
-
-        #numberpad button {
-            color: #000;
-        }
-    </style>
 </html>

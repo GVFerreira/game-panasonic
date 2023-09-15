@@ -36,7 +36,7 @@
                     Clique apenas com a ponta dos dedos.
                 </li>
             </ul>
-            <button onclick="window.location.href = 'jogo.php'">jogar</button>
+            <button onclick="window.location.href = 'jogo'">jogar</button>
         </div>
         <div id="box-image">
             <img src="img/v-razor.gif" lazy="loading">

@@ -91,9 +91,9 @@ function startGame() {
 				localStorage.setItem("acertos", qtyAcertos)
 
 				let xmlhttp = new XMLHttpRequest()
-				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${localStorage.getItem("minha-pontuacao")}`, true)
+				xmlhttp.open("GET", `salvar-pontuacao?pontuacaoAtual=${localStorage.getItem("minha-pontuacao")}`, true)
 				xmlhttp.send()
-				window.location.href = "gameover.php"
+				window.location.href = "gameover"
 			} else {
 				adicionarBot()
 			}
@@ -127,10 +127,10 @@ function startGame() {
 				localStorage.setItem("acertos", acertos)
 
 				let xmlhttp = new XMLHttpRequest()
-				xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${minhaPontuacao}`, true)
+				xmlhttp.open("GET", `salvar-pontuacao?pontuacaoAtual=${minhaPontuacao}`, true)
 				xmlhttp.send()
 
-				window.location.href = "gameover.php"
+				window.location.href = "gameover"
 			}
 		}, 1000)
 
@@ -146,10 +146,10 @@ function startGame() {
 			localStorage.setItem("acertos", acertos)
 
 			let xmlhttp = new XMLHttpRequest()
-			xmlhttp.open("GET", `salvar-pontuacao.php?pontuacaoAtual=${minhaPontuacao}`, true)
+			xmlhttp.open("GET", `salvar-pontuacao?pontuacaoAtual=${minhaPontuacao}`, true)
 			xmlhttp.send()
 
-			window.location.href = "gameover.php"
+			window.location.href = "gameover"
 		}, 60 * 1000)
 	}
 
