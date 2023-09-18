@@ -333,9 +333,12 @@ h2 {
     align-items: center;
     flex-direction: column;
     border: 1px solid #616161;
+    background-image: url("../img/fundo-com-desfoque.png");
+    background-position: center center;
+    background-size: cover;
     background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px); 
+    /* backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);  */
     border-radius: 2rem;
 }
 
@@ -449,7 +452,7 @@ h2 {
     margin: 1rem 0 0 0;
 }
 
-/* === REGRAS ESTÁTICCAS === */
+/* === REGRAS ESTÁTICAS === */
 
 #body-regras-est {
     display: flex;
@@ -469,9 +472,12 @@ h2 {
     align-items: center;
     flex-direction: column;
     border: 1px solid #616161;
+    background-image: url("../img/fundo-com-desfoque.png");
+    background-position: center center;
+    background-size: cover;
     background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px); 
+    /*backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);  */
     border-radius: 2rem;
 }
 
